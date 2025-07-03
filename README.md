@@ -1,4 +1,4 @@
-# TeemIp Telephony Management
+# ![](https://wiki.teemip.net/lib/exe/fetch.php?media=extensions:Picto_telephonymanagement.png) TeemIp Telephony Management
 TeemIp extension that provides phone numbers management and enhances telephony devices.
 
 ## Description
