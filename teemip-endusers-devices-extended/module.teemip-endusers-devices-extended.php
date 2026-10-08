@@ -26,7 +26,6 @@ SetupWebPage::AddModule(
         // Components
         //
         'datamodel' => array(
-            'model.teemip-endusers-devices-extended.php',
         ),
         'data.struct' => array(//'data.struct.IPAudit.xml',
         ),

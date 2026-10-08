@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Set>
+	<TipPNCountryCode alias="TipPNCountryCode" id="1">
+		<name>Afghanistan</name>
+		<iso_code>AF</iso_code>
+		<calling_code>93</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="2">
+		<name>Albania</name>
+		<iso_code>AL</iso_code>
+		<calling_code>355</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="3">
+		<name>Algeria</name>
+		<iso_code>DZ</iso_code>
+		<calling_code>213</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="4">
+		<name>American Samoa</name>
+		<iso_code>AS</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="5">
+		<name>Andorra</name>
+		<iso_code>AD</iso_code>
+		<calling_code>376</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="6">
+		<name>Angola</name>
+		<iso_code>AO</iso_code>
+		<calling_code>244</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="7">
+		<name>Anguilla</name>
+		<iso_code>AI</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="8">
+		<name>Antarctica</name>
+		<iso_code>AQ</iso_code>
+		<calling_code>672</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="9">
+		<name>Antigua and Barbuda</name>
+		<iso_code>AG</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="10">
+		<name>Argentina</name>
+		<iso_code>AR</iso_code>
+		<calling_code>54</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="11">
+		<name>Armenia</name>
+		<iso_code>AM</iso_code>
+		<calling_code>374</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="12">
+		<name>Aruba</name>
+		<iso_code>AW</iso_code>
+		<calling_code>297</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="13">
+		<name>Australia</name>
+		<iso_code>AU</iso_code>
+		<calling_code>61</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="14">
+		<name>Austria</name>
+		<iso_code>AT</iso_code>
+		<calling_code>43</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="15">
+		<name>Azerbaijan</name>
+		<iso_code>AZ</iso_code>
+		<calling_code>994</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="16">
+		<name>Bahamas</name>
+		<iso_code>BS</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="17">
+		<name>Bahrain</name>
+		<iso_code>BH</iso_code>
+		<calling_code>973</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="18">
+		<name>Bangladesh</name>
+		<iso_code>BD</iso_code>
+		<calling_code>880</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="19">
+		<name>Barbados</name>
+		<iso_code>BB</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="20">
+		<name>Belarus</name>
+		<iso_code>BY</iso_code>
+		<calling_code>375</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="21">
+		<name>Belgium</name>
+		<iso_code>BE</iso_code>
+		<calling_code>32</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="22">
+		<name>Belize</name>
+		<iso_code>BZ</iso_code>
+		<calling_code>501</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="23">
+		<name>Benin</name>
+		<iso_code>BJ</iso_code>
+		<calling_code>229</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="24">
+		<name>Bermuda</name>
+		<iso_code>BM</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="25">
+		<name>Bhutan</name>
+		<iso_code>BT</iso_code>
+		<calling_code>975</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="26">
+		<name>Bolivia</name>
+		<iso_code>BO</iso_code>
+		<calling_code>591</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="27">
+		<name>Bonaire, Sint Eustatius and Saba</name>
+		<iso_code>BQ</iso_code>
+		<calling_code>599</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="28">
+		<name>Bosnia and Herzegovina</name>
+		<iso_code>BA</iso_code>
+		<calling_code>387</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="29">
+		<name>Botswana</name>
+		<iso_code>BW</iso_code>
+		<calling_code>267</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="30">
+		<name>Brazil</name>
+		<iso_code>BR</iso_code>
+		<calling_code>55</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="31">
+		<name>British Indian Ocean Territory</name>
+		<iso_code>IO</iso_code>
+		<calling_code>246</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="32">
+		<name>Brunei Darussalam</name>
+		<iso_code>BN</iso_code>
+		<calling_code>673</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="33">
+		<name>Bulgaria</name>
+		<iso_code>BG</iso_code>
+		<calling_code>359</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="34">
+		<name>Burkina Faso</name>
+		<iso_code>BF</iso_code>
+		<calling_code>226</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="35">
+		<name>Burundi</name>
+		<iso_code>BI</iso_code>
+		<calling_code>257</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="36">
+		<name>Cabo Verde</name>
+		<iso_code>CV</iso_code>
+		<calling_code>238</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="37">
+		<name>Cambodia</name>
+		<iso_code>KH</iso_code>
+		<calling_code>855</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="38">
+		<name>Cameroon</name>
+		<iso_code>CM</iso_code>
+		<calling_code>237</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="39">
+		<name>Canada</name>
+		<iso_code>CA</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="40">
+		<name>Cayman Islands</name>
+		<iso_code>KY</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="41">
+		<name>Central African Republic</name>
+		<iso_code>CF</iso_code>
+		<calling_code>236</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="42">
+		<name>Chad</name>
+		<iso_code>TD</iso_code>
+		<calling_code>235</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="43">
+		<name>Chile</name>
+		<iso_code>CL</iso_code>
+		<calling_code>56</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="44">
+		<name>China</name>
+		<iso_code>CN</iso_code>
+		<calling_code>86</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="45">
+		<name>Christmas Island</name>
+		<iso_code>CX</iso_code>
+		<calling_code>61</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="46">
+		<name>Cocos (Keeling) Islands</name>
+		<iso_code>CC</iso_code>
+		<calling_code>61</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="47">
+		<name>Colombia</name>
+		<iso_code>CO</iso_code>
+		<calling_code>57</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="48">
+		<name>Comoros</name>
+		<iso_code>KM</iso_code>
+		<calling_code>269</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="49">
+		<name>Congo</name>
+		<iso_code>CG</iso_code>
+		<calling_code>242</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="50">
+		<name>Congo (Democratic Republic of the)</name>
+		<iso_code>CD</iso_code>
+		<calling_code>243</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="51">
+		<name>Cook Islands</name>
+		<iso_code>CK</iso_code>
+		<calling_code>682</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="52">
+		<name>Costa Rica</name>
+		<iso_code>CR</iso_code>
+		<calling_code>506</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="53">
+		<name>Croatia</name>
+		<iso_code>HR</iso_code>
+		<calling_code>385</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="54">
+		<name>Cuba</name>
+		<iso_code>CU</iso_code>
+		<calling_code>53</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="55">
+		<name>Curaçao</name>
+		<iso_code>CW</iso_code>
+		<calling_code>599</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="56">
+		<name>Cyprus</name>
+		<iso_code>CY</iso_code>
+		<calling_code>357</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="57">
+		<name>Czechia</name>
+		<iso_code>CZ</iso_code>
+		<calling_code>420</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="58">
+		<name>Côte d'Ivoire</name>
+		<iso_code>CI</iso_code>
+		<calling_code>225</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="59">
+		<name>Denmark</name>
+		<iso_code>DK</iso_code>
+		<calling_code>45</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="60">
+		<name>Djibouti</name>
+		<iso_code>DJ</iso_code>
+		<calling_code>253</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="61">
+		<name>Dominica</name>
+		<iso_code>DM</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="62">
+		<name>Dominican Republic</name>
+		<iso_code>DO</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="63">
+		<name>Ecuador</name>
+		<iso_code>EC</iso_code>
+		<calling_code>593</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="64">
+		<name>Egypt</name>
+		<iso_code>EG</iso_code>
+		<calling_code>20</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="65">
+		<name>El Salvador</name>
+		<iso_code>SV</iso_code>
+		<calling_code>503</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="66">
+		<name>Equatorial Guinea</name>
+		<iso_code>GQ</iso_code>
+		<calling_code>240</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="67">
+		<name>Eritrea</name>
+		<iso_code>ER</iso_code>
+		<calling_code>291</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="68">
+		<name>Estonia</name>
+		<iso_code>EE</iso_code>
+		<calling_code>372</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="69">
+		<name>Eswatini</name>
+		<iso_code>SZ</iso_code>
+		<calling_code>268</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="70">
+		<name>Ethiopia</name>
+		<iso_code>ET</iso_code>
+		<calling_code>251</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="71">
+		<name>Falkland Islands (Malvinas)</name>
+		<iso_code>FK</iso_code>
+		<calling_code>500</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="72">
+		<name>Faroe Islands</name>
+		<iso_code>FO</iso_code>
+		<calling_code>298</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="73">
+		<name>Fiji</name>
+		<iso_code>FJ</iso_code>
+		<calling_code>679</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="74">
+		<name>Finland</name>
+		<iso_code>FI</iso_code>
+		<calling_code>358</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="75">
+		<name>France</name>
+		<iso_code>FR</iso_code>
+		<calling_code>33</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="76">
+		<name>French Guiana</name>
+		<iso_code>GF</iso_code>
+		<calling_code>594</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="77">
+		<name>French Polynesia</name>
+		<iso_code>PF</iso_code>
+		<calling_code>689</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="78">
+		<name>Gabon</name>
+		<iso_code>GA</iso_code>
+		<calling_code>241</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="79">
+		<name>Gambia</name>
+		<iso_code>GM</iso_code>
+		<calling_code>220</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="80">
+		<name>Georgia</name>
+		<iso_code>GE</iso_code>
+		<calling_code>995</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="81">
+		<name>Germany</name>
+		<iso_code>DE</iso_code>
+		<calling_code>49</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="82">
+		<name>Ghana</name>
+		<iso_code>GH</iso_code>
+		<calling_code>233</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="83">
+		<name>Gibraltar</name>
+		<iso_code>GI</iso_code>
+		<calling_code>350</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="84">
+		<name>Greece</name>
+		<iso_code>GR</iso_code>
+		<calling_code>30</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="85">
+		<name>Greenland</name>
+		<iso_code>GL</iso_code>
+		<calling_code>299</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="86">
+		<name>Grenada</name>
+		<iso_code>GD</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="87">
+		<name>Guadeloupe</name>
+		<iso_code>GP</iso_code>
+		<calling_code>590</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="88">
+		<name>Guam</name>
+		<iso_code>GU</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="89">
+		<name>Guatemala</name>
+		<iso_code>GT</iso_code>
+		<calling_code>502</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="90">
+		<name>Guernsey</name>
+		<iso_code>GG</iso_code>
+		<calling_code>44</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="91">
+		<name>Guinea</name>
+		<iso_code>GN</iso_code>
+		<calling_code>224</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="92">
+		<name>Guinea-Bissau</name>
+		<iso_code>GW</iso_code>
+		<calling_code>245</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="93">
+		<name>Guyana</name>
+		<iso_code>GY</iso_code>
+		<calling_code>592</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="94">
+		<name>Haiti</name>
+		<iso_code>HT</iso_code>
+		<calling_code>509</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="95">
+		<name>Holy See</name>
+		<iso_code>VA</iso_code>
+		<calling_code>39</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="96">
+		<name>Honduras</name>
+		<iso_code>HN</iso_code>
+		<calling_code>504</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="97">
+		<name>Hong Kong</name>
+		<iso_code>HK</iso_code>
+		<calling_code>852</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="98">
+		<name>Hungary</name>
+		<iso_code>HU</iso_code>
+		<calling_code>36</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="99">
+		<name>Iceland</name>
+		<iso_code>IS</iso_code>
+		<calling_code>354</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="100">
+		<name>India</name>
+		<iso_code>IN</iso_code>
+		<calling_code>91</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="101">
+		<name>Indonesia</name>
+		<iso_code>ID</iso_code>
+		<calling_code>62</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="102">
+		<name>Iran</name>
+		<iso_code>IR</iso_code>
+		<calling_code>98</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="103">
+		<name>Iraq</name>
+		<iso_code>IQ</iso_code>
+		<calling_code>964</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="104">
+		<name>Ireland</name>
+		<iso_code>IE</iso_code>
+		<calling_code>353</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="105">
+		<name>Isle of Man</name>
+		<iso_code>IM</iso_code>
+		<calling_code>44</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="106">
+		<name>Israel</name>
+		<iso_code>IL</iso_code>
+		<calling_code>972</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="107">
+		<name>Italy</name>
+		<iso_code>IT</iso_code>
+		<calling_code>39</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="108">
+		<name>Jamaica</name>
+		<iso_code>JM</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="109">
+		<name>Japan</name>
+		<iso_code>JP</iso_code>
+		<calling_code>81</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="110">
+		<name>Jersey</name>
+		<iso_code>JE</iso_code>
+		<calling_code>44</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="111">
+		<name>Jordan</name>
+		<iso_code>JO</iso_code>
+		<calling_code>962</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="112">
+		<name>Kazakhstan</name>
+		<iso_code>KZ</iso_code>
+		<calling_code>7</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="113">
+		<name>Kenya</name>
+		<iso_code>KE</iso_code>
+		<calling_code>254</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="114">
+		<name>Kiribati</name>
+		<iso_code>KI</iso_code>
+		<calling_code>686</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="115">
+		<name>Korea (Democratic People's Republic of)</name>
+		<iso_code>KP</iso_code>
+		<calling_code>850</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="116">
+		<name>Korea (Republic of)</name>
+		<iso_code>KR</iso_code>
+		<calling_code>82</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="117">
+		<name>Kosovo</name>
+		<iso_code>XK</iso_code>
+		<calling_code>383</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="118">
+		<name>Kuwait</name>
+		<iso_code>KW</iso_code>
+		<calling_code>965</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="119">
+		<name>Kyrgyzstan</name>
+		<iso_code>KG</iso_code>
+		<calling_code>996</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="120">
+		<name>Lao People's Democratic Republic</name>
+		<iso_code>LA</iso_code>
+		<calling_code>856</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="121">
+		<name>Latvia</name>
+		<iso_code>LV</iso_code>
+		<calling_code>371</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="122">
+		<name>Lebanon</name>
+		<iso_code>LB</iso_code>
+		<calling_code>961</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="123">
+		<name>Lesotho</name>
+		<iso_code>LS</iso_code>
+		<calling_code>266</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="124">
+		<name>Liberia</name>
+		<iso_code>LR</iso_code>
+		<calling_code>231</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="125">
+		<name>Libya</name>
+		<iso_code>LY</iso_code>
+		<calling_code>218</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="126">
+		<name>Liechtenstein</name>
+		<iso_code>LI</iso_code>
+		<calling_code>423</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="127">
+		<name>Lithuania</name>
+		<iso_code>LT</iso_code>
+		<calling_code>370</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="128">
+		<name>Luxembourg</name>
+		<iso_code>LU</iso_code>
+		<calling_code>352</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="129">
+		<name>Macao</name>
+		<iso_code>MO</iso_code>
+		<calling_code>853</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="130">
+		<name>Madagascar</name>
+		<iso_code>MG</iso_code>
+		<calling_code>261</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="131">
+		<name>Malawi</name>
+		<iso_code>MW</iso_code>
+		<calling_code>265</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="132">
+		<name>Malaysia</name>
+		<iso_code>MY</iso_code>
+		<calling_code>60</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="133">
+		<name>Maldives</name>
+		<iso_code>MV</iso_code>
+		<calling_code>960</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="134">
+		<name>Mali</name>
+		<iso_code>ML</iso_code>
+		<calling_code>223</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="135">
+		<name>Malta</name>
+		<iso_code>MT</iso_code>
+		<calling_code>356</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="136">
+		<name>Marshall Islands</name>
+		<iso_code>MH</iso_code>
+		<calling_code>692</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="137">
+		<name>Martinique</name>
+		<iso_code>MQ</iso_code>
+		<calling_code>596</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="138">
+		<name>Mauritania</name>
+		<iso_code>MR</iso_code>
+		<calling_code>222</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="139">
+		<name>Mauritius</name>
+		<iso_code>MU</iso_code>
+		<calling_code>230</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="140">
+		<name>Mayotte</name>
+		<iso_code>YT</iso_code>
+		<calling_code>262</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="141">
+		<name>Mexico</name>
+		<iso_code>MX</iso_code>
+		<calling_code>52</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="142">
+		<name>Micronesia</name>
+		<iso_code>FM</iso_code>
+		<calling_code>691</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="143">
+		<name>Moldova</name>
+		<iso_code>MD</iso_code>
+		<calling_code>373</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="144">
+		<name>Monaco</name>
+		<iso_code>MC</iso_code>
+		<calling_code>377</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="145">
+		<name>Mongolia</name>
+		<iso_code>MN</iso_code>
+		<calling_code>976</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="146">
+		<name>Montenegro</name>
+		<iso_code>ME</iso_code>
+		<calling_code>382</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="147">
+		<name>Montserrat</name>
+		<iso_code>MS</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="148">
+		<name>Morocco</name>
+		<iso_code>MA</iso_code>
+		<calling_code>212</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="149">
+		<name>Mozambique</name>
+		<iso_code>MZ</iso_code>
+		<calling_code>258</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="150">
+		<name>Myanmar</name>
+		<iso_code>MM</iso_code>
+		<calling_code>95</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="151">
+		<name>Namibia</name>
+		<iso_code>NA</iso_code>
+		<calling_code>264</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="152">
+		<name>Nauru</name>
+		<iso_code>NR</iso_code>
+		<calling_code>674</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="153">
+		<name>Nepal</name>
+		<iso_code>NP</iso_code>
+		<calling_code>977</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="154">
+		<name>Netherlands</name>
+		<iso_code>NL</iso_code>
+		<calling_code>31</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="155">
+		<name>New Caledonia</name>
+		<iso_code>NC</iso_code>
+		<calling_code>687</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="156">
+		<name>New Zealand</name>
+		<iso_code>NZ</iso_code>
+		<calling_code>64</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="157">
+		<name>Nicaragua</name>
+		<iso_code>NI</iso_code>
+		<calling_code>505</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="158">
+		<name>Niger</name>
+		<iso_code>NE</iso_code>
+		<calling_code>227</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="159">
+		<name>Nigeria</name>
+		<iso_code>NG</iso_code>
+		<calling_code>234</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="160">
+		<name>Niue</name>
+		<iso_code>NU</iso_code>
+		<calling_code>683</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="161">
+		<name>Norfolk Island</name>
+		<iso_code>NF</iso_code>
+		<calling_code>672</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="162">
+		<name>North Macedonia</name>
+		<iso_code>MK</iso_code>
+		<calling_code>389</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="163">
+		<name>Northern Mariana Islands</name>
+		<iso_code>MP</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="164">
+		<name>Norway</name>
+		<iso_code>NO</iso_code>
+		<calling_code>47</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="165">
+		<name>Oman</name>
+		<iso_code>OM</iso_code>
+		<calling_code>968</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="166">
+		<name>Pakistan</name>
+		<iso_code>PK</iso_code>
+		<calling_code>92</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="167">
+		<name>Palau</name>
+		<iso_code>PW</iso_code>
+		<calling_code>680</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="168">
+		<name>Palestine</name>
+		<iso_code>PS</iso_code>
+		<calling_code>970</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="169">
+		<name>Panama</name>
+		<iso_code>PA</iso_code>
+		<calling_code>507</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="170">
+		<name>Papua New Guinea</name>
+		<iso_code>PG</iso_code>
+		<calling_code>675</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="171">
+		<name>Paraguay</name>
+		<iso_code>PY</iso_code>
+		<calling_code>595</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="172">
+		<name>Peru</name>
+		<iso_code>PE</iso_code>
+		<calling_code>51</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="173">
+		<name>Philippines</name>
+		<iso_code>PH</iso_code>
+		<calling_code>63</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="174">
+		<name>Pitcairn</name>
+		<iso_code>PN</iso_code>
+		<calling_code>64</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="175">
+		<name>Poland</name>
+		<iso_code>PL</iso_code>
+		<calling_code>48</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="176">
+		<name>Portugal</name>
+		<iso_code>PT</iso_code>
+		<calling_code>351</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="177">
+		<name>Puerto Rico</name>
+		<iso_code>PR</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="178">
+		<name>Qatar</name>
+		<iso_code>QA</iso_code>
+		<calling_code>974</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="179">
+		<name>Romania</name>
+		<iso_code>RO</iso_code>
+		<calling_code>40</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="180">
+		<name>Russian Federation</name>
+		<iso_code>RU</iso_code>
+		<calling_code>7</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="181">
+		<name>Rwanda</name>
+		<iso_code>RW</iso_code>
+		<calling_code>250</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="182">
+		<name>Réunion</name>
+		<iso_code>RE</iso_code>
+		<calling_code>262</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="183">
+		<name>Saint Barthélemy</name>
+		<iso_code>BL</iso_code>
+		<calling_code>590</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="184">
+		<name>Saint Helena, Ascension and Tristan da Cunha</name>
+		<iso_code>SH</iso_code>
+		<calling_code>290</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="185">
+		<name>Saint Kitts and Nevis</name>
+		<iso_code>KN</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="186">
+		<name>Saint Lucia</name>
+		<iso_code>LC</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="187">
+		<name>Saint Martin (French part)</name>
+		<iso_code>MF</iso_code>
+		<calling_code>590</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="188">
+		<name>Saint Pierre and Miquelon</name>
+		<iso_code>PM</iso_code>
+		<calling_code>508</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="189">
+		<name>Saint Vincent and the Grenadines</name>
+		<iso_code>VC</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="190">
+		<name>Samoa</name>
+		<iso_code>WS</iso_code>
+		<calling_code>685</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="191">
+		<name>San Marino</name>
+		<iso_code>SM</iso_code>
+		<calling_code>378</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="192">
+		<name>Sao Tome and Principe</name>
+		<iso_code>ST</iso_code>
+		<calling_code>239</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="193">
+		<name>Saudi Arabia</name>
+		<iso_code>SA</iso_code>
+		<calling_code>966</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="194">
+		<name>Senegal</name>
+		<iso_code>SN</iso_code>
+		<calling_code>221</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="195">
+		<name>Serbia</name>
+		<iso_code>RS</iso_code>
+		<calling_code>381</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="196">
+		<name>Seychelles</name>
+		<iso_code>SC</iso_code>
+		<calling_code>248</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="197">
+		<name>Sierra Leone</name>
+		<iso_code>SL</iso_code>
+		<calling_code>232</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="198">
+		<name>Singapore</name>
+		<iso_code>SG</iso_code>
+		<calling_code>65</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="199">
+		<name>Sint Maarten (Dutch part)</name>
+		<iso_code>SX</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="200">
+		<name>Slovakia</name>
+		<iso_code>SK</iso_code>
+		<calling_code>421</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="201">
+		<name>Slovenia</name>
+		<iso_code>SI</iso_code>
+		<calling_code>386</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="202">
+		<name>Solomon Islands</name>
+		<iso_code>SB</iso_code>
+		<calling_code>677</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="203">
+		<name>Somalia</name>
+		<iso_code>SO</iso_code>
+		<calling_code>252</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="204">
+		<name>South Africa</name>
+		<iso_code>ZA</iso_code>
+		<calling_code>27</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="205">
+		<name>South Georgia and the South Sandwich Islands</name>
+		<iso_code>GS</iso_code>
+		<calling_code>500</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="206">
+		<name>South Sudan</name>
+		<iso_code>SS</iso_code>
+		<calling_code>211</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="207">
+		<name>Spain</name>
+		<iso_code>ES</iso_code>
+		<calling_code>34</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="208">
+		<name>Sri Lanka</name>
+		<iso_code>LK</iso_code>
+		<calling_code>94</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="209">
+		<name>Sudan</name>
+		<iso_code>SD</iso_code>
+		<calling_code>249</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="210">
+		<name>Suriname</name>
+		<iso_code>SR</iso_code>
+		<calling_code>597</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="211">
+		<name>Svalbard and Jan Mayen</name>
+		<iso_code>SJ</iso_code>
+		<calling_code>47</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="212">
+		<name>Sweden</name>
+		<iso_code>SE</iso_code>
+		<calling_code>46</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="213">
+		<name>Switzerland</name>
+		<iso_code>CH</iso_code>
+		<calling_code>41</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="214">
+		<name>Syrian Arab Republic</name>
+		<iso_code>SY</iso_code>
+		<calling_code>963</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="215">
+		<name>Taiwan</name>
+		<iso_code>TW</iso_code>
+		<calling_code>886</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="216">
+		<name>Tajikistan</name>
+		<iso_code>TJ</iso_code>
+		<calling_code>992</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="217">
+		<name>Tanzania</name>
+		<iso_code>TZ</iso_code>
+		<calling_code>255</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="218">
+		<name>Thailand</name>
+		<iso_code>TH</iso_code>
+		<calling_code>66</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="219">
+		<name>Timor-Leste</name>
+		<iso_code>TL</iso_code>
+		<calling_code>670</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="220">
+		<name>Togo</name>
+		<iso_code>TG</iso_code>
+		<calling_code>228</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="221">
+		<name>Tokelau</name>
+		<iso_code>TK</iso_code>
+		<calling_code>690</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="222">
+		<name>Tonga</name>
+		<iso_code>TO</iso_code>
+		<calling_code>676</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="223">
+		<name>Trinidad and Tobago</name>
+		<iso_code>TT</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="224">
+		<name>Tunisia</name>
+		<iso_code>TN</iso_code>
+		<calling_code>216</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="225">
+		<name>Turkmenistan</name>
+		<iso_code>TM</iso_code>
+		<calling_code>993</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="226">
+		<name>Turks and Caicos Islands</name>
+		<iso_code>TC</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="227">
+		<name>Tuvalu</name>
+		<iso_code>TV</iso_code>
+		<calling_code>688</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="228">
+		<name>Türkiye</name>
+		<iso_code>TR</iso_code>
+		<calling_code>90</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="229">
+		<name>Uganda</name>
+		<iso_code>UG</iso_code>
+		<calling_code>256</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="230">
+		<name>Ukraine</name>
+		<iso_code>UA</iso_code>
+		<calling_code>380</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="231">
+		<name>United Arab Emirates</name>
+		<iso_code>AE</iso_code>
+		<calling_code>971</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="232">
+		<name>United Kingdom</name>
+		<iso_code>GB</iso_code>
+		<calling_code>44</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="233">
+		<name>United States of America</name>
+		<iso_code>US</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="234">
+		<name>Uruguay</name>
+		<iso_code>UY</iso_code>
+		<calling_code>598</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="235">
+		<name>Uzbekistan</name>
+		<iso_code>UZ</iso_code>
+		<calling_code>998</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="236">
+		<name>Vanuatu</name>
+		<iso_code>VU</iso_code>
+		<calling_code>678</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="237">
+		<name>Venezuela</name>
+		<iso_code>VE</iso_code>
+		<calling_code>58</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="238">
+		<name>Viet Nam</name>
+		<iso_code>VN</iso_code>
+		<calling_code>84</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="239">
+		<name>Virgin Islands (British)</name>
+		<iso_code>VG</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="240">
+		<name>Virgin Islands (U.S.)</name>
+		<iso_code>VI</iso_code>
+		<calling_code>1</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="241">
+		<name>Wallis and Futuna</name>
+		<iso_code>WF</iso_code>
+		<calling_code>681</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="242">
+		<name>Western Sahara</name>
+		<iso_code>EH</iso_code>
+		<calling_code>212</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="243">
+		<name>Yemen</name>
+		<iso_code>YE</iso_code>
+		<calling_code>967</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="244">
+		<name>Zambia</name>
+		<iso_code>ZM</iso_code>
+		<calling_code>260</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="245">
+		<name>Zimbabwe</name>
+		<iso_code>ZW</iso_code>
+		<calling_code>263</calling_code>
+	</TipPNCountryCode>
+	<TipPNCountryCode alias="TipPNCountryCode" id="246">
+		<name>Åland Islands</name>
+		<iso_code>AX</iso_code>
+		<calling_code>358</calling_code>
+	</TipPNCountryCode>
+</Set>

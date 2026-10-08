@@ -5,165 +5,195 @@
  */
 
 //
-// Class: PNObject
+// Class: TipPNObject
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:PNObject' => 'Phone Number Object',
-    'Class:PNObject+' => '',
-    'Class:PNObject/Attribute:finalclass' => 'Sub-class',
-    'Class:PNObject/Attribute:finalclass+' => 'Name of the final class',
-    'Class:PNObject/Attribute:org_id' => 'Organization',
-    'Class:PNObject/Attribute:org_id+' => '',
-    'Class:PNObject/Attribute:org_name' => 'Organization name',
-    'Class:PNObject/Attribute:org_name+' => '',
-    'Class:PNObject/Attribute:status' => 'Status',
-    'Class:PNObject/Attribute:status+' => '',
-    'Class:PNObject/Attribute:status/Value:reserved' => 'Reserved',
-    'Class:PNObject/Attribute:status/Value:reserved+' => '',
-    'Class:PNObject/Attribute:status/Value:allocated' => 'Allocated',
-    'Class:PNObject/Attribute:status/Value:allocated+' => '',
-    'Class:PNObject/Attribute:status/Value:released' => 'Released',
-    'Class:PNObject/Attribute:status/Value:released+' => '',
-    'Class:PNObject/Attribute:status/Value:unassigned' => 'Unassigned',
-    'Class:PNObject/Attribute:status/Value:unassigned+' => '',
-    'Class:PNObject/Attribute:comment' => 'Note',
-    'Class:PNObject/Attribute:comment+' => '',
-    'Class:PNObject/Attribute:requestor_id' => 'Requestor',
-    'Class:PNObject/Attribute:requestor_id+' => '',
-    'Class:PNObject/Attribute:requestor_name' => 'Requestor name',
-    'Class:PNObject/Attribute:requestor_name+' => '',
-    'Class:PNObject/Attribute:allocation_date' => 'Allocation date',
-    'Class:PNObject/Attribute:allocation_date+' => 'Date when PN object has been allocated',
-    'Class:PNObject/Attribute:release_date' => 'Release date',
-    'Class:PNObject/Attribute:release_date+' => 'Date when PN object has been released and is not used anymore.',
-    'Class:PNObject/Attribute:contacts_list' => 'Contacts',
-    'Class:PNObject/Attribute:contacts_list+' => 'Contacts attached to the PN object',
-    'Class:PNObject/Attribute:documents_list' => 'Documents',
-    'Class:PNObject/Attribute:documents_list+' => 'Documents attached to the PN object',
-    'Class:PNObject/Attribute:tickets_list' => 'Documents',
-    'Class:PNObject/Attribute:tickets_list+' => 'Documents attached to the PN object',
+    'Class:TipPNObject' => 'Phone Number Object',
+    'Class:TipPNObject+' => '',
+    'Class:TipPNObject/Attribute:finalclass' => 'Final class',
+    'Class:TipPNObject/Attribute:finalclass+' => 'Name of the final class',
+    'Class:TipPNObject/Attribute:org_id' => 'Organization',
+    'Class:TipPNObject/Attribute:org_id+' => 'Organization that the phone number object belongs to',
+    'Class:TipPNObject/Attribute:org_name' => 'Organization name',
+    'Class:TipPNObject/Attribute:org_name+' => '',
+    'Class:TipPNObject/Attribute:status' => 'Status',
+    'Class:TipPNObject/Attribute:status+' => '',
+    'Class:TipPNObject/Attribute:status/Value:reserved' => 'Reserved',
+    'Class:TipPNObject/Attribute:status/Value:reserved+' => '',
+    'Class:TipPNObject/Attribute:status/Value:allocated' => 'Allocated',
+    'Class:TipPNObject/Attribute:status/Value:allocated+' => '',
+    'Class:TipPNObject/Attribute:status/Value:released' => 'Released',
+    'Class:TipPNObject/Attribute:status/Value:released+' => '',
+    'Class:TipPNObject/Attribute:status/Value:unassigned' => 'Unassigned',
+    'Class:TipPNObject/Attribute:status/Value:unassigned+' => '',
+    'Class:TipPNObject/Attribute:comment' => 'Note',
+    'Class:TipPNObject/Attribute:comment+' => '',
+    'Class:TipPNObject/Attribute:requestor_id' => 'Requestor',
+    'Class:TipPNObject/Attribute:requestor_id+' => 'Person who requested the creation of the object',
+    'Class:TipPNObject/Attribute:requestor_name' => 'Requestor name',
+    'Class:TipPNObject/Attribute:requestor_name+' => '',
+    'Class:TipPNObject/Attribute:allocation_date' => 'Allocation date',
+    'Class:TipPNObject/Attribute:allocation_date+' => 'Date when PN object has been allocated',
+    'Class:TipPNObject/Attribute:release_date' => 'Release date',
+    'Class:TipPNObject/Attribute:release_date+' => 'Date when PN object has been released and is not used anymore.',
+    'Class:TipPNObject/Attribute:contacts_list' => 'Contacts',
+    'Class:TipPNObject/Attribute:contacts_list+' => 'Contacts attached to the PN object',
+    'Class:TipPNObject/Attribute:documents_list' => 'Documents',
+    'Class:TipPNObject/Attribute:documents_list+' => 'Documents attached to the PN object',
+    'Class:TipPNObject/Attribute:tickets_list' => 'Documents',
+    'Class:TipPNObject/Attribute:tickets_list+' => 'Documents attached to the PN object',
 ));
 
 //
-// Class: lnkContactToPNObject
+// Class: lnkContactToTipPNObject
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:lnkContactToPNObject' => 'Link Contact / PN Object',
-    'Class:lnkContactToPNObject+' => '',
-    'Class:lnkContactToPNObject/Name' => '%1$s / %2$s',
-    'Class:lnkContactToPNObject/Attribute:pnobject_id' => 'PN Object',
-    'Class:lnkContactToPNObject/Attribute:pnobject_id+' => '',
-    'Class:lnkContactToPNObject/Attribute:contact_id' => 'Contact',
-    'Class:lnkContactToPNObject/Attribute:contact_id+' => '',
-    'Class:lnkContactToPNObject/Attribute:contact_name' => 'Contact name',
-    'Class:lnkContactToPNObject/Attribute:contact_name+' => '',
+    'Class:lnkContactToTipPNObject' => 'Link Contact / PN Object',
+    'Class:lnkContactToTipPNObject+' => '',
+    'Class:lnkContactToTipPNObject/Name' => '%1$s / %2$s',
+    'Class:lnkContactToTipPNObject/Attribute:tippnobject_id' => 'PN Object',
+    'Class:lnkContactToTipPNObject/Attribute:tippnobject_id+' => '',
+    'Class:lnkContactToTipPNObject/Attribute:contact_id' => 'Contact',
+    'Class:lnkContactToTipPNObject/Attribute:contact_id+' => '',
+    'Class:lnkContactToTipPNObject/Attribute:contact_name' => 'Contact name',
+    'Class:lnkContactToTipPNObject/Attribute:contact_name+' => '',
 ));
 
 //
-// Class: lnkDocToPNObject
+// Class: lnkDocToTipPNObject
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:lnkDocToPNObject' => 'Link Document / PN Object',
-    'Class:lnkDocToPNObject+' => '',
-    'Class:lnkDocToPNObject/Name' => '%1$s / %2$s',
-    'Class:lnkDocToPNObject/Attribute:pnobject_id' => 'PN Object',
-    'Class:lnkDocToPNObject/Attribute:pnobject_id+' => '',
-    'Class:lnkDocToPNObject/Attribute:document_id' => 'Document',
-    'Class:lnkDocToPNObject/Attribute:document_id+' => '',
-    'Class:lnkDocToPNObject/Attribute:document_name' => 'Document name',
-    'Class:lnkDocToPNObject/Attribute:document_name+' => '',
+    'Class:lnkDocToTipPNObject' => 'Link Document / PN Object',
+    'Class:lnkDocToTipPNObject+' => '',
+    'Class:lnkDocToTipPNObject/Name' => '%1$s / %2$s',
+    'Class:lnkDocToTipPNObject/Attribute:tippnobject_id' => 'PN Object',
+    'Class:lnkDocToTipPNObject/Attribute:tippnobject_id+' => '',
+    'Class:lnkDocToTipPNObject/Attribute:document_id' => 'Document',
+    'Class:lnkDocToTipPNObject/Attribute:document_id+' => '',
+    'Class:lnkDocToTipPNObject/Attribute:document_name' => 'Document name',
+    'Class:lnkDocToTipPNObject/Attribute:document_name+' => '',
 ));
 
 //
-// Class: lnkPNObjectToTicket
+// Class: lnkTipPNObjectToTicket
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:lnkPNObjectToTicket' => 'Link PN Object / Ticket',
-    'Class:lnkPNObjectToTicket+' => '',
-    'Class:lnkPNObjectToTicket/Name' => '%1$s / %2$s',
-    'Class:lnkPNObjectToTicket/Attribute:pnobject_id' => 'PN Object',
-    'Class:lnkPNObjectToTicket/Attribute:pnobject_id+' => '',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_id' => 'Ticket',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_id+' => '',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_ref' => 'Ref',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_ref+' => '',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_title' => 'Title',
-    'Class:lnkPNObjectToTicket/Attribute:ticket_title+' => '',
+    'Class:lnkTipPNObjectToTicket' => 'Link PN Object / Ticket',
+    'Class:lnkTipPNObjectToTicket+' => '',
+    'Class:lnkTipPNObjectToTicket/Name' => '%1$s / %2$s',
+    'Class:lnkTipPNObjectToTicket/Attribute:tippnobject_id' => 'PN Object',
+    'Class:lnkTipPNObjectToTicket/Attribute:tippnobject_id+' => '',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_id' => 'Ticket',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_id+' => '',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_ref' => 'Ref',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_ref+' => '',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_title' => 'Title',
+    'Class:lnkTipPNObjectToTicket/Attribute:ticket_title+' => '',
 ));
 
 //
-// Class: PNRange
+// Class: TipPNCountryCode
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-	'Class:PNRange' => 'Phone Number Range',
-	'Class:PNRange+' => '',
-	'Class:PNRange:baseinfo' => 'General Information',
-    'Class:PNRange:delegationinfo' => 'Delegation Information',
-	'Class:PNRange:numberinginfo' => 'Numbering Information',
-    'Class:PNRange:DelegatedToChild' => '<delegation_highlight>Delegated to organization: </delegation_highlight>%1$s',
-    'Class:PNRange:DelegatedFromParent' => '<delegation_highlight>Delegated from organization: </delegation_highlight>%1$s',
-	'Class:PNRange/Attribute:name' => 'Name',
-	'Class:PNRange/Attribute:name+' => '',
-    'Class:PNRange/Attribute:parent_org_id' => 'Delegated from',
-    'Class:PNRange/Attribute:parent_org_id+' => 'Organization where the phone number range has been delegated from',
-    'Class:PNRange/Attribute:parent_org_name' => 'Delegating organization name',
-    'Class:PNRange/Attribute:parent_org_name+' => 'Name of the organization where the phone number range has been delegated from',
-    'Class:PNRange/Attribute:parent_id' => 'Parent range',
-    'Class:PNRange/Attribute:parent_id+' => 'Parent phone number range that the range belongs to',
-    'Class:PNRange/Attribute:parent_name' => 'Parent name',
-    'Class:PNRange/Attribute:parent_name+' => 'Name of the parent phone number range',
-	'Class:PNRange/Attribute:firstnumber' => 'First number',
-	'Class:PNRange/Attribute:firstnumber+' => 'First number of the range',
-    'Class:PNRange/Attribute:lastnumber' => 'Last number',
-    'Class:PNRange/Attribute:lastnumber+' => 'Last number of the range',
-    'Class:PNRange/Attribute:occupancy' => 'Registered numbers',
-    'Class:PNRange/Attribute:occupancy+' => 'Percentage of phone numbers that belong to the range',
-    'Class:PNRange/Attribute:phonenumbers_list' => 'Phone numbers',
-    'Class:PNRange/Attribute:phonenumbers_list+' => 'All the pone numbers that belong to the range',
-    'Class:PNRange/UniquenessRule:no_duplicate_name' => 'The same Name already exist in the organization, duplicates are not allowed.',
-    'Class:PNRange/UniquenessRule:no_duplicate_range' => 'The same Range of numbers already exist in the organization: duplicates are not allowed',
+    'Class:TipPNCountryCode' => 'Country Calling Code',
+    'Class:TipPNCountryCode+' => 'International calling code (ITU-T E.164) of a country',
+    'Class:TipPNCountryCode/Name' => '%1$s (+%2$s)',
+    'Class:TipPNCountryCode/Attribute:name' => 'Country',
+    'Class:TipPNCountryCode/Attribute:name+' => '',
+    'Class:TipPNCountryCode/Attribute:iso_code' => 'ISO code',
+    'Class:TipPNCountryCode/Attribute:iso_code+' => 'ISO 3166-1 alpha-2 code of the country',
+    'Class:TipPNCountryCode/Attribute:calling_code' => 'Calling code',
+    'Class:TipPNCountryCode/Attribute:calling_code+' => 'Country calling code, without \'+\'',
+    'Class:TipPNCountryCode/Attribute:tippnranges_list' => 'Phone number ranges',
+    'Class:TipPNCountryCode/Attribute:tippnranges_list+' => 'Phone number ranges belonging to the country',
+    'Class:TipPNCountryCode/UniquenessRule:no_duplicate_name' => 'This country already exists',
+    'Class:TipPNCountryCode/UniquenessRule:no_duplicate_iso_code' => 'This ISO code is already used by another country',
 ));
 
 //
-// Class: PhoneNumber
+// Class: TipPNRange
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:PhoneNumber' => 'Phone Number',
-    'Class:PhoneNumber+' => '',
-    'Class:PhoneNumber:baseinfo' => 'General Information',
-    'Class:PhoneNumber:numberinfo' => 'Number Information',
-    'Class:PhoneNumber/Attribute:pnrange_id' => 'Phone number range',
-    'Class:PhoneNumber/Attribute:pnrange_id+' => '',
-    'Class:PhoneNumber/Attribute:pnrange_name' => 'Name of the range',
-    'Class:PhoneNumber/Attribute:pnrange_name+' => '',
-    'Class:PhoneNumber/Attribute:number' => 'Number',
-    'Class:PhoneNumber/Attribute:number+' => '',
-    'Class:PhoneNumber/Attribute:pnextensions_list' => 'Extensions',
-    'Class:PhoneNumber/Attribute:pnextensions_list+' => 'All the extensions attached to that number',
+	'Class:TipPNRange' => 'Phone Number Range',
+	'Class:TipPNRange+' => '',
+	'Class:TipPNRange:baseinfo' => 'General Information',
+    'Class:TipPNRange:delegationinfo' => 'Delegation Information',
+	'Class:TipPNRange:numberinginfo' => 'Numbering Information',
+    'Class:TipPNRange:DelegatedToChild' => '<delegation_highlight>Delegated to organization: </delegation_highlight>%1$s',
+    'Class:TipPNRange:DelegatedFromParent' => '<delegation_highlight>Delegated from organization: </delegation_highlight>%1$s',
+	'Class:TipPNRange/Attribute:name' => 'Name',
+	'Class:TipPNRange/Attribute:name+' => '',
+    'Class:TipPNRange/Attribute:parent_org_id' => 'Delegated from',
+    'Class:TipPNRange/Attribute:parent_org_id+' => 'Organization where the phone number range has been delegated from',
+    'Class:TipPNRange/Attribute:parent_org_name' => 'Delegating organization name',
+    'Class:TipPNRange/Attribute:parent_org_name+' => 'Name of the organization where the phone number range has been delegated from',
+    'Class:TipPNRange/Attribute:parent_id' => 'Parent range',
+    'Class:TipPNRange/Attribute:parent_id+' => 'Parent phone number range that the range belongs to',
+    'Class:TipPNRange/Attribute:parent_name' => 'Parent name',
+    'Class:TipPNRange/Attribute:parent_name+' => '',
+    'Class:TipPNRange/Attribute:tippncountrycode_id' => 'Country',
+    'Class:TipPNRange/Attribute:tippncountrycode_id+' => 'Country the range belongs to. It defines the calling code of its numbers.',
+    'Class:TipPNRange/Attribute:tippncountrycode_name' => 'Country name',
+    'Class:TipPNRange/Attribute:tippncountrycode_name+' => '',
+    'Class:TipPNRange/Attribute:calling_code' => 'Calling code',
+    'Class:TipPNRange/Attribute:calling_code+' => '',
+	'Class:TipPNRange/Attribute:firstnumber' => 'First number',
+	'Class:TipPNRange/Attribute:firstnumber+' => 'First number of the range in international E.164 format (e.g. +33123456789)',
+    'Class:TipPNRange/Attribute:lastnumber' => 'Last number',
+    'Class:TipPNRange/Attribute:lastnumber+' => 'Last number of the range in international E.164 format (e.g. +33123456789)',
+    'Class:TipPNRange/Attribute:occupancy' => 'Registered numbers',
+    'Class:TipPNRange/Attribute:occupancy+' => 'Percentage of phone number objects in the range',
+    'Class:TipPNRange/Attribute:tipphonenumbers_list' => 'Phone numbers',
+    'Class:TipPNRange/Attribute:tipphonenumbers_list+' => 'All the pone numbers that belong to the range',
+    'Class:TipPNRange/UniquenessRule:no_duplicate_name' => 'The same Name already exist in the organization: duplicates are not allowed.',
+    'Class:TipPNRange/UniquenessRule:no_duplicate_range' => 'The same Range of numbers already exist in the organization: duplicates are not allowed',
 ));
 
 //
-// Class: PNExtension
+// Class: TipPhoneNumber
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Class:PNExtension' => 'Extension',
-    'Class:PNExtension+' => '',
-    'Class:PNExtension/Name' => '%1$s - %2$s',
-    'Class:PNExtension:baseinfo' => 'General Information',
-    'Class:PNExtension:numberinfo' => 'Extension Information',
-    'Class:PNExtension/Attribute:phonenumber_id' => 'Phone number',
-    'Class:PNExtension/Attribute:phonenumber_id+' => '',
-    'Class:PNExtension/Attribute:phonenumber_number' => 'Phone number',
-    'Class:PNExtension/Attribute:phonenumber_number+' => '',
-    'Class:PNExtension/Attribute:code' => 'Code',
-    'Class:PNExtension/Attribute:code+' => '',
+    'Class:TipPhoneNumber' => 'Phone Number',
+    'Class:TipPhoneNumber+' => '',
+    'Class:TipPhoneNumber:baseinfo' => 'General Information',
+    'Class:TipPhoneNumber:numberinfo' => 'Number Information',
+    'Class:TipPhoneNumber/Attribute:tippnrange_id' => 'Phone number range',
+    'Class:TipPhoneNumber/Attribute:tippnrange_id+' => '',
+    'Class:TipPhoneNumber/Attribute:tippnrange_name' => 'Name of the range',
+    'Class:TipPhoneNumber/Attribute:tippnrange_name+' => '',
+    'Class:TipPhoneNumber/Attribute:number' => 'Number',
+    'Class:TipPhoneNumber/Attribute:number+' => 'Number in international E.164 format (e.g. +33123456789)',
+    'Class:TipPhoneNumber/Attribute:tippnextensions_list' => 'Extensions',
+    'Class:TipPhoneNumber/Attribute:tippnextensions_list+' => 'All the extensions attached to that number',
+    'Class:TipPhoneNumber/UniquenessRule:no_duplicate_number' => 'This number already exists in the organization',
+    'Class:TipPhoneNumber/Tab:ci_list' => 'CIs',
+    'Class:TipPhoneNumber/Tab:ci_list+' => 'List of CIs using this phone number',
+    'Class:TipPhoneNumber/Tab:ci_list_class' => '%1$ss using this phone number',
+));
+
+//
+// Class: TipPNExtension
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+    'Class:TipPNExtension' => 'Extension',
+    'Class:TipPNExtension+' => '',
+    'Class:TipPNExtension/Name' => '%1$s - %2$s',
+    'Class:TipPNExtension:baseinfo' => 'General Information',
+    'Class:TipPNExtension:numberinfo' => 'Extension Information',
+    'Class:TipPNExtension/Attribute:tipphonenumber_id' => 'Phone number',
+    'Class:TipPNExtension/Attribute:tipphonenumber_id+' => '',
+    'Class:TipPNExtension/Attribute:tipphonenumber_number' => 'Phone number',
+    'Class:TipPNExtension/Attribute:tipphonenumber_number+' => '',
+    'Class:TipPNExtension/Attribute:code' => 'Code',
+    'Class:TipPNExtension/Attribute:code+' => '',
 ));
 
 //
@@ -171,50 +201,66 @@ Dict::Add('EN US', 'English', 'English', array(
 //
 
 Dict::Add('EN US', 'English', 'English', array(
-    'Menu:TelephonyManagement' => 'Telephony Management',
-    'Menu:TelephonyManagement+' => '',
-    'Menu:TelephonySpace' => 'Telephony Space',
-    'Menu:TelephonySpace+' => '',
-    'Menu:NewPNObject' => 'New Phone Number',
-    'Menu:NewPNObject+' => 'Creation of a new phone number object',
-    'Menu:SearchPNObject' => 'Search for Phone Numbers',
-    'Menu:SearchPNObject+' => '',
-    'Menu:PNRange' => 'Phone Number Ranges',
-    'Menu:PNRange+' => '',
-    'Menu:PhoneNumber' => 'Phone Numbers',
-    'Menu:PhoneNumber+' => '',
-    'Menu:PNExtension' => 'Extensions',
-    'Menu:PNExtension+' => '',
-    'Menu:TelephonySpace:PNObjects' => 'Phone Numbers',
+    'Menu:TipTelephonyManagement' => 'Telephony Management',
+    'Menu:TipTelephonyManagement+' => '',
+    'Menu:TipTelephonySpace' => 'Telephony Space',
+    'Menu:TipTelephonySpace+' => '',
+    'Menu:NewTipPNObject' => 'New Phone Number object',
+    'Menu:NewTipPNObject+' => 'Creation of a new phone number object',
+    'Menu:SearchTipPNObject' => 'Search for Phone Number objects',
+    'Menu:SearchTipPNObject+' => '',
+    'Menu:TipPNRange' => 'Phone Number Ranges',
+    'Menu:TipPNRange+' => '',
+    'Menu:TipPhoneNumber' => 'Phone Numbers',
+    'Menu:TipPhoneNumber+' => '',
+    'Menu:TipPNExtension' => 'Extensions',
+    'Menu:TipPNExtension+' => '',
+    'Menu:TipTelephonySpace:PNObjects' => 'Phone Numbers',
+    'Menu:PNMgmt:Typology' => 'Telephony Typologies',
 
 //
 // Management of PNRanges
 //
     // Creation Management
     'UI:PNManagement:Action:New:Domain:NameCollision' => 'Domain name already exists!',
+    'UI:PNManagement:Action:New:TipPhoneNumber:NotE164' => '%1$s is not a valid international number. Expected format: +<country code><number> (e.g. +33123456789)',
+    'UI:PNManagement:Action:New:TipPhoneNumber:NotInRange' => 'Number %1$s doesn\'t belong to range %2$s',
+    'UI:PNManagement:Action:New:TipPNRange:NotSameLength' => 'First and last numbers of the range must have the same number of digits',
+    'UI:PNManagement:Action:New:TipPNRange:WrongCallingCode' => 'Numbers of the range must start with +%1$s, the calling code of %2$s',
+    'UI:PNManagement:Action:New:TipPNRange:NotSameCountryAsParent' => 'Range must belong to the same country as its parent range',
+    'UI:PNManagement:Action:New:TipPNRange:Reverted' => 'First number of the range must be smaller than the last one',
+    'UI:PNManagement:Action:New:TipPNRange:NotInParent' => 'Range must be strictly included in its parent range',
+    'UI:PNManagement:Action:New:TipPNRange:Collision0' => 'Range already exists',
+    'UI:PNManagement:Action:New:TipPNRange:Collision1' => 'First number of the range collides with another range',
+    'UI:PNManagement:Action:New:TipPNRange:Collision2' => 'Last number of the range collides with another range',
+    'UI:PNManagement:Action:Delegate:TipPNRange:ConflictWithDelegatedBlockFromOtherOrg' => 'Range contains a range delegated from another organization',
 
     // Display tree of PNRanges
-    'UI:PNManagement:Action:DisplayTree:PNRange' => 'Display Tree',
-    'UI:PNManagement:Action:DisplayTree:PNRange+' => '',
+    'UI:PNManagement:Action:DisplayTree:TipPNRange' => 'Display Tree',
+    'UI:PNManagement:Action:DisplayTree:TipPNRange+' => '',
     'teemip-phone-number-mgmt/Operation:DisplayTree/Title' => 'Display Tree',
     'UI:PhoneNumberManagement:Action:DisplayTree:Title' => 'Phone Number Ranges',
-    'UI:IPManagement:Action:DisplayTree:PNRange:OrgName' => 'Organization %1$s',
+    'UI:IPManagement:Action:DisplayTree:TipPNRange:OrgName' => 'Organization %1$s',
 
     // Display pointers to previous and next PNRanges
-    'UI:PNManagement:Action:DisplayPrevious:PNRange' => 'Previous',
-    'UI:PNManagement:Action:DisplayNext:PNSubnet' => 'Next',
+    'UI:PNManagement:Action:DisplayPrevious:TipPNRange' => 'Previous',
+    'UI:PNManagement:Action:DisplayNext:TipPNRange' => 'Next',
+
+    // Display pointers to previous and next PhoneNumbers
+    'UI:PNManagement:Action:DisplayPrevious:TipPhoneNumber' => 'Previous',
+    'UI:PNManagement:Action:DisplayNext:TipPhoneNumber' => 'Next',
 
 
-    'UI:PNManagement:Action:DisplayList:PNRange' => 'Display List',
-    'UI:PNManagement:Action:DisplayList:PNRange+' => '',
-    'UI:IPManagement:Action:DisplayList:PNRange:PageTitle_Class' => 'Phone Number Ranges',
-    'UI:PNManagement:Action:DisplayList:PNRange:Title_Class' => 'Phone Number Ranges',
+    'UI:PNManagement:Action:DisplayList:TipPNRange' => 'Display List',
+    'UI:PNManagement:Action:DisplayList:TipPNRange+' => '',
+    'UI:IPManagement:Action:DisplayList:TipPNRange:PageTitle_Class' => 'Phone Number Ranges',
+    'UI:PNManagement:Action:DisplayList:TipPNRange:Title_Class' => 'Phone Number Ranges',
 
     // Display tree of PNRanges
-    'UI:PNManagement:Action:DisplayTree:PNRange' => 'Display Tree',
-    'UI:PNManagement:Action:DisplayTree:PNRange+' => '',
-    'UI:IPManagement:Action:DisplayTree:PNRange:PageTitle_Class' => 'Phone Number Ranges',
-    'UI:IPManagement:Action:DisplayTree:PNRange:Title_Class' => 'Phone Number Ranges',
+    'UI:PNManagement:Action:DisplayTree:TipPNRange' => 'Display Tree',
+    'UI:PNManagement:Action:DisplayTree:TipPNRange+' => '',
+    'UI:IPManagement:Action:DisplayTree:TipPNRange:PageTitle_Class' => 'Phone Number Ranges',
+    'UI:IPManagement:Action:DisplayTree:TipPNRange:Title_Class' => 'Phone Number Ranges',
 
 
 ));

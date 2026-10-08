@@ -5,13 +5,13 @@
         <constant id="DEVICES_WITH_SIMCARD" xsi:type="string" _delta="define">MobilePhone,NetworkDevice,Peripheral,PC,Tablet</constant>
     </constants>
     <classes>
-        <class id="SimCard" _delta="define">
+        <class id="TipSimCard" _delta="define">
             <parent>PhysicalDevice</parent>
             <properties>
                 <category>bizmodel,searchable,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>simcard</db_table>
+                <db_table>tipsimcard</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field>finalclass</db_final_class_field>
                 <naming>
@@ -89,10 +89,10 @@
                     <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                 </field>
-                <field id="phonenumber_id" xsi:type="AttributeExternalKey">
-                    <sql>phonenumber_id</sql>
-                    <target_class>PhoneNumber</target_class>
-                    <filter><![CDATA[SELECT PhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
+                <field id="tipphonenumber_id" xsi:type="AttributeExternalKey">
+                    <sql>tipphonenumber_id</sql>
+                    <target_class>TipPhoneNumber</target_class>
+                    <filter><![CDATA[SELECT TipPhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
@@ -100,8 +100,8 @@
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                     <jointype/>
                 </field>
-                <field id="phonenumber" xsi:type="AttributeExternalField">
-                    <extkey_attcode>phonenumber_id</extkey_attcode>
+                <field id="tipphonenumber" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tipphonenumber_id</extkey_attcode>
                     <target_attcode>number</target_attcode>
                 </field>
                 <field id="pin" xsi:type="AttributeString">
@@ -171,19 +171,19 @@
                 </field>
             </fields>
             <event_listeners>
-                <event_listener id="OnSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt">
+                <event_listener id="OnTipSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt">
                     <event>EVENT_DB_CHECK_TO_WRITE</event>
-                    <callback>OnSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt</callback>
+                    <callback>OnTipSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
-                <event_listener id="OnSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt">
+                <event_listener id="OnTipSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt">
                     <event>EVENT_DB_AFTER_WRITE</event>
-                    <callback>OnSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt</callback>
+                    <callback>OnTipSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
-                <event_listener id="OnSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt">
+                <event_listener id="OnTipSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt">
                     <event>EVENT_DB_AFTER_DELETE</event>
-                    <callback>OnSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt</callback>
+                    <callback>OnTipSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
             </event_listeners>
@@ -195,12 +195,12 @@
                     <type>Custom</type>
                     <code><![CDATA[    public function SetSimCardOnPhysicalDevice($iPhysicalDeviceId)
     {
-			if (($iPhysicalDeviceId > 0) && in_array('simcard_id', MetaModel::GetAttributesList('PhysicalDevice'))) {
+			if (($iPhysicalDeviceId > 0) && in_array('tipsimcard_id', MetaModel::GetAttributesList('PhysicalDevice'))) {
 			    $sDevicesWithSimCard = "'".str_replace(',', "','", DEVICES_WITH_SIMCARD)."'";
 				$sOQL = "SELECT PhysicalDevice AS d WHERE d.id = $iPhysicalDeviceId AND d.finalclass IN ($sDevicesWithSimCard)";
        			$oPhysicalDeviceSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL));
 				if ($oPhysicalDevice = $oPhysicalDeviceSet->Fetch()) {
-					$oPhysicalDevice->Set('simcard_id', $this->GetKey());
+					$oPhysicalDevice->Set('tipsimcard_id', $this->GetKey());
 					$oPhysicalDevice->DBUpdate();
 				}
 			}
@@ -213,25 +213,25 @@
                     <type>Custom</type>
                     <code><![CDATA[    public function ResetSimCardOnPhysicalDevice($iPhysicalDeviceId)
     {
-			if (($iPhysicalDeviceId > 0) && in_array('simcard_id', MetaModel::GetAttributesList('PhysicalDevice'))) {
+			if (($iPhysicalDeviceId > 0) && in_array('tipsimcard_id', MetaModel::GetAttributesList('PhysicalDevice'))) {
 			    $sDevicesWithSimCard = "'".str_replace(',', "','", DEVICES_WITH_SIMCARD)."'";
 				$sOQL = "SELECT PhysicalDevice AS d WHERE d.id = $iPhysicalDeviceId AND d.finalclass IN ($sDevicesWithSimCard)";
        			$oPhysicalDeviceSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL));
 				if ($oPhysicalDevice = $oPhysicalDeviceSet->Fetch()) {
-				    if ($oPhysicalDevice->Get('simcard_id') == $this->GetKey()) {
-					    $oPhysicalDevice->Set('simcard_id', 0);
+				    if ($oPhysicalDevice->Get('tipsimcard_id') == $this->GetKey()) {
+					    $oPhysicalDevice->Set('tipsimcard_id', 0);
 					    $oPhysicalDevice->DBUpdate();
 					}
 				}
 			}
     }]]></code>
                 </method>
-                <method id="OnSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt">
+                <method id="OnTipSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt">
                     <comment/>
                     <static>false</static>
                     <access>public</access>
                     <type>EventListener</type>
-                    <code><![CDATA[    public function OnSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
+                    <code><![CDATA[    public function OnTipSimCardCheckToWriteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
     {
         $iPhysicalDeviceId = $this->Get('physicaldevice_id');
         if ($iPhysicalDeviceId > 0) {
@@ -240,13 +240,13 @@
                 // Check that the right class of physical device is selected, if any
 	            $aDevicesWithSimCard = explode(',', DEVICES_WITH_SIMCARD);
                 if (!in_array(get_class($oPhysicalDevice), $aDevicesWithSimCard)) {
-                    $this->AddCheckIssue('UI:EndusersDevicesExtended:Action:New:SimCard:WrongPhysicalDevice');
+                    $this->AddCheckIssue(Dict::S('UI:EndusersDevicesExtended:Action:New:TipSimCard:WrongPhysicalDevice'));
                     return;
                 }
 
                 // Check that the format of the simcard is compatible with what the physical device can host.
-                if (in_array('simcard_format', MetaModel::GetAttributesList('PhysicalDevice'))) {
-                    $sTargetFormat = $oPhysicalDevice->Get('simcard_format');
+                if (MetaModel::IsValidAttCode(get_class($oPhysicalDevice), 'tipsimcard_format')) {
+                    $sTargetFormat = $oPhysicalDevice->Get('tipsimcard_format');
                     $sSimCardFormat = $this->Get('format');
                     switch ($sSimCardFormat) {
                         case 'full':
@@ -255,25 +255,25 @@
                         case 'nano':
                         case 'esim':
                             if ($sTargetFormat != $sSimCardFormat) {
-                                $this->AddCheckIssue('UI:EndusersDevicesExtended:Action:New:SimCard:IncompatibleSIMs');
+                                $this->AddCheckIssue(Dict::S('UI:EndusersDevicesExtended:Action:New:TipSimCard:IncompatibleSIMs'));
                             }
                             break;
 
                         case 'full_to_micro':
                             if (!in_array($sTargetFormat, ['full', 'micro'])) {
-                                $this->AddCheckIssue('UI:EndusersDevicesExtended:Action:New:SimCard:IncompatibleSIMs');
+                                $this->AddCheckIssue(Dict::S('UI:EndusersDevicesExtended:Action:New:TipSimCard:IncompatibleSIMs'));
                             }
                             break;
 
                         case 'full_to_nano':
                             if (!in_array($sTargetFormat, ['full', 'nano'])) {
-                                $this->AddCheckIssue('UI:EndusersDevicesExtended:Action:New:SimCard:IncompatibleSIMs');
+                                $this->AddCheckIssue(Dict::S('UI:EndusersDevicesExtended:Action:New:TipSimCard:IncompatibleSIMs'));
                             }
                             break;
 
                         case 'micro_to_nano':
                             if (!in_array($sTargetFormat, ['micro', 'nano'])) {
-                                $this->AddCheckIssue('UI:EndusersDevicesExtended:Action:New:SimCard:IncompatibleSIMs');
+                                $this->AddCheckIssue(Dict::S('UI:EndusersDevicesExtended:Action:New:TipSimCard:IncompatibleSIMs'));
                             }
                             break;
 
@@ -285,12 +285,12 @@
         }
     }]]></code>
                 </method>
-                <method id="OnSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt">
+                <method id="OnTipSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt">
                     <comment/>
                     <static>false</static>
                     <access>public</access>
                     <type>EventListener</type>
-                    <code><![CDATA[    public function OnSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
+                    <code><![CDATA[    public function OnTipSimCardAfterWriteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
     {
         $aEventData = $oEventData->GetEventData();
         if ($aEventData['is_new']) {
@@ -306,12 +306,12 @@
         }
     }]]></code>
                 </method>
-                <method id="OnSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt">
+                <method id="OnTipSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt">
                     <comment/>
                     <static>false</static>
                     <access>public</access>
                     <type>EventListener</type>
-                    <code><![CDATA[    public function OnSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
+                    <code><![CDATA[    public function OnTipSimCardAfterDeleteRequestedByEndUsersDevicesExtendedMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
     {
 		$this->ResetSimCardOnPhysicalDevice($this->Get('physicaldevice_id'));
     }]]></code>
@@ -332,7 +332,7 @@
                         <item id="col:col1">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:SimCard:baseinfo">
+                                <item id="fieldset:TipSimCard:baseinfo">
                                     <rank>10</rank>
                                     <items>
                                         <item id="name">
@@ -349,7 +349,7 @@
                                         </item>
                                     </items>
                                 </item>
-                                <item id="fieldset:SimCard:techinfo">
+                                <item id="fieldset:TipSimCard:techinfo">
                                     <rank>20</rank>
                                     <items>
                                         <item id="iccid">
@@ -380,7 +380,7 @@
                         <item id="col:col2">
                             <rank>20</rank>
                             <items>
-                                <item id="fieldset:SimCard:date">
+                                <item id="fieldset:TipSimCard:date">
                                     <rank>10</rank>
                                     <items>
                                         <item id="move2production">
@@ -391,7 +391,7 @@
                                         </item>
                                     </items>
                                 </item>
-                                <item id="fieldset:SimCard:otherinfo">
+                                <item id="fieldset:TipSimCard:otherinfo">
                                     <rank>20</rank>
                                     <items>
                                         <item id="description">
@@ -400,7 +400,7 @@
                                         <item id="carrier_id">
                                             <rank>20</rank>
                                         </item>
-                                        <item id="phonenumber_id">
+                                        <item id="tipphonenumber_id">
                                             <rank>30</rank>
                                         </item>
                                         <item id="contact_id">
@@ -438,7 +438,7 @@
                         <item id="iccid">
                             <rank>40</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>50</rank>
                         </item>
                         <item id="contact_id">
@@ -460,7 +460,7 @@
                         <item id="iccid">
                             <rank>40</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>50</rank>
                         </item>
                         <item id="contact_id">
@@ -479,7 +479,7 @@
                         <item id="iccid">
                             <rank>30</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>40</rank>
                         </item>
                         <item id="contact_id">
@@ -495,7 +495,7 @@
                         <item id="iccid">
                             <rank>20</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>30</rank>
                         </item>
                         <item id="contact_id">
@@ -510,10 +510,10 @@
         </class>
         <class id="TelephonyCI" _delta="must_exist">
             <fields>
-                <field id="phonenumber_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>phonenumber_id</sql>
-                    <target_class>PhoneNumber</target_class>
-                    <filter><![CDATA[SELECT PhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
+                <field id="tipphonenumber_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipphonenumber_id</sql>
+                    <target_class>TipPhoneNumber</target_class>
+                    <filter><![CDATA[SELECT TipPhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
@@ -522,7 +522,7 @@
                     <jointype/>
                 </field>
                 <field id="phonenumber" xsi:type="AttributeExternalField" _delta="redefine">
-                    <extkey_attcode>phonenumber_id</extkey_attcode>
+                    <extkey_attcode>tipphonenumber_id</extkey_attcode>
                     <target_attcode>number</target_attcode>
                 </field>
             </fields>
@@ -530,7 +530,7 @@
                 <details>
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -538,7 +538,7 @@
                 <search>
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -546,7 +546,7 @@
                 <list>
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>60</rank>
                         </item>
                     </items>
@@ -572,7 +572,7 @@
                                         <item id="status">
                                             <rank>30</rank>
                                         </item>
-                                        <item id="phonenumber_id">
+                                        <item id="tipphonenumber_id">
                                             <rank>40</rank>
                                         </item>
                                         <item id="business_criticity">
@@ -635,7 +635,7 @@
                 <search _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -643,7 +643,7 @@
                 <list _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>60</rank>
                         </item>
                     </items>
@@ -651,7 +651,7 @@
                 <summary _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -660,8 +660,8 @@
         </class>
         <class id="MobilePhone" _delta="must_exist">
             <fields>
-                <field id="simcard_format" xsi:type="AttributeEnum" _delta="define">
-                    <sql>simcard_format</sql>
+                <field id="tipsimcard_format" xsi:type="AttributeEnum" _delta="define">
+                    <sql>tipsimcard_format</sql>
                     <sort_type>rank</sort_type>
                     <values>
                         <value id="full">
@@ -689,52 +689,52 @@
                     <default_value/>
                     <display_style>list</display_style>
                 </field>
-                <field id="simcard1_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard1_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard1_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard1_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard1_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard1_id</extkey_attcode>
+                <field id="tipsimcard1_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard1_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
-                <field id="simcard2_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard2_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND c.id != :this->simcard1_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard2_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard2_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND c.id != :this->tipsimcard1_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard2_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard2_id</extkey_attcode>
+                <field id="tipsimcard2_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard2_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
@@ -756,7 +756,7 @@
                                         <item id="status">
                                             <rank>30</rank>
                                         </item>
-                                        <item id="phonenumber_id">
+                                        <item id="tipphonenumber_id">
                                             <rank>40</rank>
                                         </item>
                                         <item id="business_criticity">
@@ -818,13 +818,13 @@
                                         <item id="hw_pin">
                                             <rank>20</rank>
                                         </item>
-                                        <item id="simcard_format">
+                                        <item id="tipsimcard_format">
                                             <rank>30</rank>
                                         </item>
-                                        <item id="simcard1_id">
+                                        <item id="tipsimcard1_id">
                                             <rank>40</rank>
                                         </item>
-                                        <item id="simcard2_id">
+                                        <item id="tipsimcard2_id">
                                             <rank>50</rank>
                                         </item>
                                         <item id="ipaddress_id">
@@ -845,7 +845,7 @@
                 <search _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -853,7 +853,7 @@
                 <list _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>60</rank>
                         </item>
                     </items>
@@ -861,7 +861,7 @@
                 <summary _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -887,7 +887,7 @@
                                         <item id="status">
                                             <rank>30</rank>
                                         </item>
-                                        <item id="phonenumber_id">
+                                        <item id="tipphonenumber_id">
                                             <rank>40</rank>
                                         </item>
                                         <item id="business_criticity">
@@ -961,7 +961,7 @@
                 <search _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -969,7 +969,7 @@
                 <list _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>60</rank>
                         </item>
                     </items>
@@ -977,7 +977,7 @@
                 <summary _delta="must_exist">
                     <items>
                         <item id="phonenumber" _delta="delete"/>
-                        <item id="phonenumber_id" _delta="define">
+                        <item id="tipphonenumber_id" _delta="define">
                             <rank>80</rank>
                         </item>
                     </items>
@@ -986,8 +986,8 @@
         </class>
         <class id="Tablet" _delta="must_exist">
             <fields>
-                <field id="simcard_format" xsi:type="AttributeEnum" _delta="define">
-                    <sql>simcard_format</sql>
+                <field id="tipsimcard_format" xsi:type="AttributeEnum" _delta="define">
+                    <sql>tipsimcard_format</sql>
                     <sort_type>rank</sort_type>
                     <values>
                         <value id="full">
@@ -1015,28 +1015,28 @@
                     <default_value/>
                     <display_style>list</display_style>
                 </field>
-                <field id="simcard_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard_id</extkey_attcode>
+                <field id="tipsimcard_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
@@ -1111,10 +1111,10 @@
                                 <item id="fieldset:Tablet:techinfo">
                                     <rank>20</rank>
                                     <items>
-                                        <item id="simcard_format">
+                                        <item id="tipsimcard_format">
                                             <rank>10</rank>
                                         </item>
-                                        <item id="simcard_id">
+                                        <item id="tipsimcard_id">
                                             <rank>20</rank>
                                         </item>
                                         <item id="ipaddress_id">
@@ -1136,8 +1136,8 @@
         </class>
         <class id="PC" _delta="must_exist">
             <fields>
-                <field id="simcard_format" xsi:type="AttributeEnum" _delta="define">
-                    <sql>simcard_format</sql>
+                <field id="tipsimcard_format" xsi:type="AttributeEnum" _delta="define">
+                    <sql>tipsimcard_format</sql>
                     <sort_type>rank</sort_type>
                     <values>
                         <value id="full">
@@ -1165,28 +1165,28 @@
                     <default_value/>
                     <display_style>list</display_style>
                 </field>
-                <field id="simcard_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard_id</extkey_attcode>
+                <field id="tipsimcard_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
@@ -1195,12 +1195,12 @@
                     <items>
                         <item id="col:col2" _delta="must_exist">
                             <items>
-                                <item id="fieldset:Server:otherinfo" _delta="must_exist">
+                                <item id="fieldset:ConfigMgmt:otherinfo" _delta="must_exist">
                                     <items>
-                                        <item id="simcard_format" _delta="define">
+                                        <item id="tipsimcard_format" _delta="define">
                                             <rank>5</rank>
                                         </item>
-                                        <item id="simcard_id" _delta="define">
+                                        <item id="tipsimcard_id" _delta="define">
                                             <rank>6</rank>
                                         </item>
                                     </items>
@@ -1213,8 +1213,8 @@
         </class>
         <class id="NetworkDevice" _delta="must_exist">
             <fields>
-                <field id="simcard_format" xsi:type="AttributeEnum" _delta="define">
-                    <sql>simcard_format</sql>
+                <field id="tipsimcard_format" xsi:type="AttributeEnum" _delta="define">
+                    <sql>tipsimcard_format</sql>
                     <sort_type>rank</sort_type>
                     <values>
                         <value id="full">
@@ -1242,28 +1242,28 @@
                     <default_value/>
                     <display_style>list</display_style>
                 </field>
-                <field id="simcard_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard_id</extkey_attcode>
+                <field id="tipsimcard_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
@@ -1274,10 +1274,10 @@
                             <items>
                                 <item id="fieldset:Server:otherinfo" _delta="must_exist">
                                     <items>
-                                        <item id="simcard_format" _delta="define">
+                                        <item id="tipsimcard_format" _delta="define">
                                             <rank>5</rank>
                                         </item>
-                                        <item id="simcard_id" _delta="define">
+                                        <item id="tipsimcard_id" _delta="define">
                                             <rank>6</rank>
                                         </item>
                                     </items>
@@ -1290,8 +1290,8 @@
         </class>
         <class id="Peripheral" _delta="must_exist">
             <fields>
-                <field id="simcard_format" xsi:type="AttributeEnum" _delta="define">
-                    <sql>simcard_format</sql>
+                <field id="tipsimcard_format" xsi:type="AttributeEnum" _delta="define">
+                    <sql>tipsimcard_format</sql>
                     <sort_type>rank</sort_type>
                     <values>
                         <value id="full">
@@ -1319,28 +1319,28 @@
                     <default_value/>
                     <display_style>list</display_style>
                 </field>
-                <field id="simcard_id" xsi:type="AttributeExternalKey" _delta="define">
-                    <sql>simcard_id</sql>
-                    <target_class>SimCard</target_class>
-                    <filter><![CDATA[SELECT SimCard AS c WHERE c.org_id = :this->org_id AND
-                               (IF (:this->simcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
-                                    (IF (:this->simcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
-                                         (IF (:this->simcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
-                                              c.format = :this->simcard_format
+                <field id="tipsimcard_id" xsi:type="AttributeExternalKey" _delta="define">
+                    <sql>tipsimcard_id</sql>
+                    <target_class>TipSimCard</target_class>
+                    <filter><![CDATA[SELECT TipSimCard AS c WHERE c.org_id = :this->org_id AND
+                               (IF (:this->tipsimcard_format = 'full', c.format IN ('full', 'full_to_micro', 'full_to_nano'),
+                                    (IF (:this->tipsimcard_format = 'micro', c.format IN ('micro', 'full_to_micro'),
+                                         (IF (:this->tipsimcard_format = 'nano', c.format IN ('nano', 'full_to_nano', 'micro_to_nano'),
+                                              c.format = :this->tipsimcard_format
                                          ))
                                     ))
                                ))]]>
                     </filter>
                     <dependencies>
                         <attribute id="org_id"/>
-                        <attribute id="simcard_format"/>
+                        <attribute id="tipsimcard_format"/>
                     </dependencies>
                     <is_null_allowed>true</is_null_allowed>
                     <allow_target_creation>true</allow_target_creation>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                 </field>
-                <field id="simcard_name" xsi:type="AttributeExternalField" _delta="define">
-                    <extkey_attcode>simcard_id</extkey_attcode>
+                <field id="tipsimcard_name" xsi:type="AttributeExternalField" _delta="define">
+                    <extkey_attcode>tipsimcard_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
             </fields>
@@ -1415,10 +1415,10 @@
                                 <item id="fieldset:Peripheral:techinfo">
                                     <rank>20</rank>
                                     <items>
-                                        <item id="simcard_format">
+                                        <item id="tipsimcard_format">
                                             <rank>10</rank>
                                         </item>
-                                        <item id="simcard_id">
+                                        <item id="tipsimcard_id">
                                             <rank>20</rank>
                                         </item>
                                         <item id="ipaddress_id">
@@ -1460,7 +1460,7 @@
                     <code><![CDATA[    public function SetPhysicalDeviceOnSimCard($iSimCardId)
     {
 			if ($iSimCardId > 0) {
-				$sOQL = "SELECT SimCard AS s WHERE s.id = :id";
+				$sOQL = "SELECT TipSimCard AS s WHERE s.id = :id";
 				$oSimCardSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $iSimCardId));
 				if ($oSimCard = $oSimCardSet->Fetch()) {
 					$oSimCard->Set('physicaldevice_id', $this->GetKey());
@@ -1477,7 +1477,7 @@
                     <code><![CDATA[    public function ResetPhysicalDeviceOnSimCard($iSimCardId)
     {
 			if ($iSimCardId > 0) {
-				$sOQL = "SELECT SimCard AS s WHERE s.id = :id";
+				$sOQL = "SELECT TipSimCard AS s WHERE s.id = :id";
        			$oSimCardSet = new CMDBObjectSet(DBObjectSearch::FromOQL($sOQL), array(), array('id' => $iSimCardId));
 				if ($oSimCard = $oSimCardSet->Fetch()) {
 				    if ($oSimCard->Get('physicaldevice_id') == $this->GetKey()) {
@@ -1501,34 +1501,34 @@
             $aEventData = $oEventData->GetEventData();
             if ($aEventData['is_new']) {
                 // We are in the AfterInsert situation
-                $this->SetPhysicalDeviceOnSimCard($this->Get('simcard1_id'));
-                $this->SetPhysicalDeviceOnSimCard($this->Get('simcard2_id'));
+                $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard1_id'));
+                $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard2_id'));
             } else {
                 // We are in the AfterUpdate situation
                 $aChanges = $this->ListPreviousValuesForUpdatedAttributes();
-                if (array_key_exists('simcard1_id', $aChanges)) {
-                    $this->ResetPhysicalDeviceOnSimCard($aChanges['simcard1_id']);
-                    $this->SetPhysicalDeviceOnSimCard($this->Get('simcard1_id'));
+                if (array_key_exists('tipsimcard1_id', $aChanges)) {
+                    $this->ResetPhysicalDeviceOnSimCard($aChanges['tipsimcard1_id']);
+                    $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard1_id'));
                 }
-                if (array_key_exists('simcard2_id', $aChanges)) {
-                    $this->ResetPhysicalDeviceOnSimCard($aChanges['simcard2_id']);
-                    $this->SetPhysicalDeviceOnSimCard($this->Get('simcard2_id'));
+                if (array_key_exists('tipsimcard2_id', $aChanges)) {
+                    $this->ResetPhysicalDeviceOnSimCard($aChanges['tipsimcard2_id']);
+                    $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard2_id'));
                 }
             }
         } else {
             $aDevicesWithSimCard = explode(',', DEVICES_WITH_SIMCARD);
-            if (in_array(get_class($this), $aDevicesWithSimCard) && in_array('simcard_id', MetaModel::GetAttributesList($sClass))) {
+            if (in_array(get_class($this), $aDevicesWithSimCard) && in_array('tipsimcard_id', MetaModel::GetAttributesList($sClass))) {
                 // Process the other CIs with sim cards next
                 $aEventData = $oEventData->GetEventData();
                 if ($aEventData['is_new']) {
                     // We are in the AfterInsert situation
-                    $this->SetPhysicalDeviceOnSimCard($this->Get('simcard_id'));
+                    $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard_id'));
                 } else {
                     // We are in the AfterUpdate situation
                     $aChanges = $this->ListPreviousValuesForUpdatedAttributes();
-                    if (array_key_exists('simcard_id', $aChanges)) {
-                        $this->ResetPhysicalDeviceOnSimCard($aChanges['simcard_id']);
-                        $this->SetPhysicalDeviceOnSimCard($this->Get('simcard_id'));
+                    if (array_key_exists('tipsimcard_id', $aChanges)) {
+                        $this->ResetPhysicalDeviceOnSimCard($aChanges['tipsimcard_id']);
+                        $this->SetPhysicalDeviceOnSimCard($this->Get('tipsimcard_id'));
                     }
                 }
             }
@@ -1545,13 +1545,13 @@
         $sClass = get_class($this);
         if ($sClass == 'MobilePhone') {
             // Process the case of mobile phones first
- 		    $this->ResetPhysicalDeviceOnSimCard($this->Get('simcard1_id'));
-		    $this->ResetPhysicalDeviceOnSimCard($this->Get('simcard2_id'));
+ 		    $this->ResetPhysicalDeviceOnSimCard($this->Get('tipsimcard1_id'));
+		    $this->ResetPhysicalDeviceOnSimCard($this->Get('tipsimcard2_id'));
 		} else {
             $aDevicesWithSimCard = explode(',', DEVICES_WITH_SIMCARD);
-            if (in_array(get_class($this), $aDevicesWithSimCard) && in_array('simcard_id', MetaModel::GetAttributesList(get_class($this)))) {
+            if (in_array(get_class($this), $aDevicesWithSimCard) && in_array('tipsimcard_id', MetaModel::GetAttributesList(get_class($this)))) {
                 // Process the other CIs with sim cards next
-		        $this->ResetPhysicalDeviceOnSimCard($this->Get('simcard_id'));
+		        $this->ResetPhysicalDeviceOnSimCard($this->Get('tipsimcard_id'));
 		    }
 		}
     }]]></code>
@@ -1567,14 +1567,14 @@
                         <dashlets>
                             <dashlet id="teemip_101" xsi:type="DashletBadge" _delta="define">
                                 <rank>101</rank>
-                                <class>SimCard</class>
+                                <class>TipSimCard</class>
                             </dashlet>
                         </dashlets>
                     </cell>
                 </cells>
             </definition>
         </menu>
-        <menu id="TelephonySpace" xsi:type="DashboardMenuNode" _delta="must_exist">
+        <menu id="TipTelephonySpace" xsi:type="DashboardMenuNode" _delta="must_exist">
             <definition>
                 <cells>
                     <cell id="teemip-200" _delta="define">
@@ -1599,7 +1599,7 @@
                             </dashlet>
                             <dashlet id="teemip-250" xsi:type="DashletBadge">
                                 <rank>50</rank>
-                                <class>SimCard</class>
+                                <class>TipSimCard</class>
                             </dashlet>
                         </dashlets>
                     </cell>
@@ -1614,22 +1614,22 @@
                             <dashlet id="teemip-320" xsi:type="DashletBadgeFiltered">
                                 <rank>20</rank>
                                 <title>Title:DevicesWithSIM:NetworkDevice</title>
-                                <query>SELECT NetworkDevice AS d WHERE d.simcard_id > 0</query>
+                                <query>SELECT NetworkDevice AS d WHERE d.tipsimcard_id > 0</query>
                             </dashlet>
                             <dashlet id="teemip-330" xsi:type="DashletBadgeFiltered">
                                 <rank>30</rank>
                                 <title>Title:DevicesWithSIM:Peripheral</title>
-                                <query>SELECT Peripheral AS d WHERE d.simcard_id > 0</query>
+                                <query>SELECT Peripheral AS d WHERE d.tipsimcard_id > 0</query>
                             </dashlet>
                             <dashlet id="teemip-340" xsi:type="DashletBadgeFiltered">
                                 <rank>40</rank>
                                 <title>Title:DevicesWithSIM:PC</title>
-                                <query>SELECT PC AS d WHERE d.simcard_id > 0</query>
+                                <query>SELECT PC AS d WHERE d.tipsimcard_id > 0</query>
                             </dashlet>
                             <dashlet id="teemip-350" xsi:type="DashletBadgeFiltered">
                                 <rank>50</rank>
                                 <title>Title:DevicesWithSIM:Tablet</title>
-                                <query>SELECT Tablet AS d WHERE d.simcard_id > 0</query>
+                                <query>SELECT Tablet AS d WHERE d.tipsimcard_id > 0</query>
                             </dashlet>
                         </dashlets>
                     </cell>

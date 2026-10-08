@@ -7,9 +7,9 @@
 namespace TeemIp\TeemIp\Extension\PhoneNumberManagement\Model;
 
 use Combodo\iTop\Service\Events\EventData;
-use PNObject;
+use TipPNObject;
 
-class _PNExtension extends PNObject
+class _TipPNExtension extends TipPNObject
 {
     /**
      * Event to set attribute flags.
@@ -17,10 +17,10 @@ class _PNExtension extends PNObject
      * @param EventData $oEventData
      * @return void
      */
-    public function OnPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt(EventData $oEventData): void
+    public function OnTipPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt(EventData $oEventData): void
     {
         $this->AddAttributeFlags('org_id', OPT_ATT_READONLY);
-        $this->AddAttributeFlags('phonenumber_id', OPT_ATT_READONLY);
+        $this->AddAttributeFlags('tipphonenumber_id', OPT_ATT_READONLY);
     }
 
 }

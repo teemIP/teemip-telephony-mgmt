@@ -17,7 +17,7 @@ SetupWebPage::AddModule(
 		//
 		'dependencies' => array(
 			'teemip-endusers-devices-extended/1.0.0-dev',
-			'itop-bridge-endusers-devices-services/3.2.0||teemip-endusers-devices-extended/1.0.0-dev',
+			'itop-bridge-endusers-devices-services/3.3.0||teemip-endusers-devices-extended/1.0.0-dev',
 		),
 		'mandatory' => false,
 		'visible' => false,

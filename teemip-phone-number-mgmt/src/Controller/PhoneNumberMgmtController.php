@@ -20,7 +20,7 @@ use TeemIp\TeemIp\Extension\Framework\Helper\DisplayTree;
 use utils;
 use WebPage;
 
-class CableMgmtController extends Controller
+class PhoneNumberMgmtController extends Controller
 {
     public const ROUTE_NAMESPACE = 'phone_number_mgmt';
 
@@ -44,8 +44,8 @@ class CableMgmtController extends Controller
         $sDelegatedNodesRendering = utils::ReadParam('delegated_nodes_rendering', 'folded', false, 'raw_data');
 
         $oDisplayTree = new DisplayTree();
-        $aParams['Class'] = MetaModel::GetName('PNRange');
-        $aParams['sHtml'] = $oDisplayTree->GetTree('PNRange', $iCurrentOrganization, $sDelegatedNodesRendering);;
+        $aParams['Class'] = MetaModel::GetName('TipPNRange');
+        $aParams['sHtml'] = $oDisplayTree->GetTree('TipPNRange', $iCurrentOrganization, $sDelegatedNodesRendering);;
 
         $aParams['sCancelURL'] = utils::GetAbsoluteUrlAppRoot().'pages/UI.php?operation=search&filter='.$sFilter;
 

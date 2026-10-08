@@ -2,14 +2,14 @@
 <itop_design xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.2" load="strict"
     xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/TeemIp/teemip-core-ip-mgmt/refs/heads/master/teemip-framework/doc/design.xsd">
     <classes>
-        <class id="PNObject" _delta="define">
+        <class id="TipPNObject" _delta="define">
             <parent>cmdbAbstractObject</parent>
             <properties>
                 <comment/>
                 <category>bizmodel,pnmgmt</category>
                 <abstract>true</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>pnobject</db_table>
+                <db_table>tippnobject</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field>finalclass</db_final_class_field>
                 <naming>
@@ -113,24 +113,24 @@
                     <is_null_allowed>true</is_null_allowed>
                 </field>
                 <field id="contacts_list" xsi:type="AttributeLinkedSetIndirect">
-                    <linked_class>lnkContactToPNObject</linked_class>
-                    <ext_key_to_me>pnobject_id</ext_key_to_me>
+                    <linked_class>lnkContactToTipPNObject</linked_class>
+                    <ext_key_to_me>tippnobject_id</ext_key_to_me>
                     <count_min>0</count_min>
                     <count_max>0</count_max>
                     <ext_key_to_remote>contact_id</ext_key_to_remote>
                     <duplicates/>
                 </field>
                 <field id="documents_list" xsi:type="AttributeLinkedSetIndirect">
-                    <linked_class>lnkDocToPNObject</linked_class>
-                    <ext_key_to_me>pnobject_id</ext_key_to_me>
+                    <linked_class>lnkDocToTipPNObject</linked_class>
+                    <ext_key_to_me>tippnobject_id</ext_key_to_me>
                     <count_min>0</count_min>
                     <count_max>0</count_max>
                     <ext_key_to_remote>document_id</ext_key_to_remote>
                     <duplicates/>
                 </field>
                 <field id="tickets_list" xsi:type="AttributeLinkedSetIndirect">
-                    <linked_class>lnkPNObjectToTicket</linked_class>
-                    <ext_key_to_me>pnobject_id</ext_key_to_me>
+                    <linked_class>lnkTipPNObjectToTicket</linked_class>
+                    <ext_key_to_me>tippnobject_id</ext_key_to_me>
                     <count_min>0</count_min>
                     <count_max>0</count_max>
                     <ext_key_to_remote>ticket_id</ext_key_to_remote>
@@ -138,19 +138,19 @@
                 </field>
             </fields>
             <event_listeners>
-                <event_listener id="OnPNObjectBeforeWriteRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNObjectBeforeWriteRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_BEFORE_WRITE</event>
-                    <callback>OnPNObjectBeforeWriteRequestedByPNObject</callback>
+                    <callback>OnTipPNObjectBeforeWriteRequestedByPhoneNumberMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
             </event_listeners>
             <methods>
-                <method id="OnPNObjectBeforeWriteRequestedByPhoneNumberMgmt">
+                <method id="OnTipPNObjectBeforeWriteRequestedByPhoneNumberMgmt">
                     <comment/>
                     <static>false</static>
                     <access>public</access>
                     <type>EventListener</type>
-                    <code><![CDATA[    public function OnPNObjectBeforeWriteRequestedByPNObject(Combodo\iTop\Service\Events\EventData $oEventData)
+                    <code><![CDATA[    public function OnTipPNObjectBeforeWriteRequestedByPhoneNumberMgmt(Combodo\iTop\Service\Events\EventData $oEventData)
     {
         $aEventData = $oEventData->GetEventData();
         if ($aEventData['is_new']) {
@@ -218,32 +218,32 @@
                 </default_search>
             </presentation>
         </class>
-        <class id="lnkContactToPNObject" _delta="define">
+        <class id="lnkContactToTipPNObject" _delta="define">
             <parent>cmdbAbstractObject</parent>
             <properties>
                 <is_link>1</is_link>
                 <category>bizmodel,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>lnkcontacttopnobject</db_table>
+                <db_table>lnkcontacttotippnobject</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field/>
                 <naming>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="contact_name"/>
                     </attributes>
                 </naming>
                 <reconciliation>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="contact_id"/>
                     </attributes>
                 </reconciliation>
                 <uniqueness_rules>
                     <rule id="no_duplicate">
                         <attributes>
-                            <attribute id="pnobject_id"/>
+                            <attribute id="tippnobject_id"/>
                             <attribute id="contact_id"/>
                         </attributes>
                         <filter><![CDATA[]]></filter>
@@ -253,9 +253,9 @@
                 </uniqueness_rules>
             </properties>
             <fields>
-                <field id="pnobject_id" xsi:type="AttributeExternalKey">
-                    <sql>pnobject_id</sql>
-                    <target_class>PNObject</target_class>
+                <field id="tippnobject_id" xsi:type="AttributeExternalKey">
+                    <sql>tippnobject_id</sql>
+                    <target_class>TipPNObject</target_class>
                     <is_null_allowed>false</is_null_allowed>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                     <jointype/>
@@ -276,7 +276,7 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="contact_id">
@@ -286,7 +286,7 @@
                 </details>
                 <search>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="contact_id">
@@ -296,7 +296,7 @@
                 </search>
                 <list>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="contact_id">
@@ -306,32 +306,32 @@
                 </list>
             </presentation>
         </class>
-        <class id="lnkDocToPNObject" _delta="define">
+        <class id="lnkDocToTipPNObject" _delta="define">
             <parent>cmdbAbstractObject</parent>
             <properties>
                 <is_link>1</is_link>
                 <category>bizmodel,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>lnkdoctopnobject</db_table>
+                <db_table>lnkdoctotippnobject</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field/>
                 <naming>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="document_name"/>
                     </attributes>
                 </naming>
                 <reconciliation>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="document_id"/>
                     </attributes>
                 </reconciliation>
                 <uniqueness_rules>
                     <rule id="no_duplicate">
                         <attributes>
-                            <attribute id="pnobject_id"/>
+                            <attribute id="tippnobject_id"/>
                             <attribute id="document_id"/>
                         </attributes>
                         <filter><![CDATA[]]></filter>
@@ -341,9 +341,9 @@
                 </uniqueness_rules>
             </properties>
             <fields>
-                <field id="pnobject_id" xsi:type="AttributeExternalKey">
-                    <sql>pnobject_id</sql>
-                    <target_class>PNObject</target_class>
+                <field id="tippnobject_id" xsi:type="AttributeExternalKey">
+                    <sql>tippnobject_id</sql>
+                    <target_class>TipPNObject</target_class>
                     <is_null_allowed>false</is_null_allowed>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                     <jointype/>
@@ -364,7 +364,7 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="document_id">
@@ -374,7 +374,7 @@
                 </details>
                 <search>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="document_id">
@@ -384,7 +384,7 @@
                 </search>
                 <list>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="document_id">
@@ -394,32 +394,32 @@
                 </list>
             </presentation>
         </class>
-        <class id="lnkPNObjectToTicket" _delta="define">
+        <class id="lnkTipPNObjectToTicket" _delta="define">
             <parent>cmdbAbstractObject</parent>
             <properties>
                 <is_link>1</is_link>
                 <category>bizmodel</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>lnkpnobjecttoticket</db_table>
+                <db_table>lnktippnobjecttoticket</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field/>
                 <naming>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="ticket_ref"/>
                     </attributes>
                 </naming>
                 <reconciliation>
                     <attributes>
-                        <attribute id="pnobject_id"/>
+                        <attribute id="tippnobject_id"/>
                         <attribute id="ticket_id"/>
                     </attributes>
                 </reconciliation>
                 <uniqueness_rules>
                     <rule id="no_duplicate">
                         <attributes>
-                            <attribute id="pnobject_id"/>
+                            <attribute id="tippnobject_id"/>
                             <attribute id="ticket_id"/>
                         </attributes>
                         <filter><![CDATA[]]></filter>
@@ -429,9 +429,9 @@
                 </uniqueness_rules>
             </properties>
             <fields>
-                <field id="pnobject_id" xsi:type="AttributeExternalKey">
-                    <sql>pnobject_id</sql>
-                    <target_class>PNObject</target_class>
+                <field id="tippnobject_id" xsi:type="AttributeExternalKey">
+                    <sql>tippnobject_id</sql>
+                    <target_class>TipPNObject</target_class>
                     <is_null_allowed>false</is_null_allowed>
                     <on_target_delete>DEL_AUTO</on_target_delete>
                     <jointype/>
@@ -455,7 +455,7 @@
             <presentation>
                 <details>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="ticket_id">
@@ -465,7 +465,7 @@
                 </details>
                 <search>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="ticket_id">
@@ -475,7 +475,7 @@
                 </search>
                 <list>
                     <items>
-                        <item id="pnobject_id">
+                        <item id="tippnobject_id">
                             <rank>10</rank>
                         </item>
                         <item id="ticket_id">
@@ -485,18 +485,133 @@
                 </list>
             </presentation>
         </class>
-        <class id="PNRange" _delta="define">
-            <parent>PNObject</parent>
+        <class id="TipPNCountryCode" _delta="define">
+            <parent>Typology</parent>
+            <properties>
+                <comment/>
+                <category>bizmodel,searchable,pnmgmt</category>
+                <abstract>false</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>tippncountrycode</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field/>
+                <naming>
+                    <attributes>
+                        <attribute id="name"/>
+                        <attribute id="calling_code"/>
+                    </attributes>
+                </naming>
+                <reconciliation>
+                    <attributes>
+                        <attribute id="iso_code"/>
+                    </attributes>
+                </reconciliation>
+                <uniqueness_rules>
+                    <rule id="no_duplicate_name">
+                        <attributes>
+                            <attribute id="name"/>
+                        </attributes>
+                        <filter/>
+                        <disabled>false</disabled>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                    <rule id="no_duplicate_iso_code">
+                        <attributes>
+                            <attribute id="iso_code"/>
+                        </attributes>
+                        <filter/>
+                        <disabled>false</disabled>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                </uniqueness_rules>
+            </properties>
+            <fields>
+                <field id="iso_code" xsi:type="AttributeString">
+                    <sql>iso_code</sql>
+                    <validation_pattern>^[A-Z]{2}$</validation_pattern>
+                    <default_value/>
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+                <field id="calling_code" xsi:type="AttributeString">
+                    <sql>calling_code</sql>
+                    <validation_pattern>^[1-9][0-9]{0,2}$</validation_pattern>
+                    <default_value/>
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+                <field id="tippnranges_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>TipPNRange</linked_class>
+                    <ext_key_to_me>tippncountrycode_id</ext_key_to_me>
+                    <edit_mode>none</edit_mode>
+                </field>
+            </fields>
+            <methods/>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="iso_code">
+                            <rank>20</rank>
+                        </item>
+                        <item id="calling_code">
+                            <rank>30</rank>
+                        </item>
+                        <item id="tippnranges_list">
+                            <rank>40</rank>
+                        </item>
+                    </items>
+                </details>
+                <default_search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="iso_code">
+                            <rank>20</rank>
+                        </item>
+                        <item id="calling_code">
+                            <rank>30</rank>
+                        </item>
+                    </items>
+                </default_search>
+                <search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="iso_code">
+                            <rank>20</rank>
+                        </item>
+                        <item id="calling_code">
+                            <rank>30</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="iso_code">
+                            <rank>10</rank>
+                        </item>
+                        <item id="calling_code">
+                            <rank>20</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+        </class>
+        <class id="TipPNRange" _delta="define">
+            <parent>TipPNObject</parent>
             <php_parent>
-                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_PNRange</name>
-                <file>src/Model/_PNRange.php</file>
+                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_TipPNRange</name>
+                <file>src/Model/_TipPNRange.php</file>
             </php_parent>
             <properties>
                 <comment/>
                 <category>bizmodel,searchable,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>pnrange</db_table>
+                <db_table>tippnrange</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field>finalclass</db_final_class_field>
                 <naming>
@@ -558,7 +673,7 @@
                     <sql>parent_id</sql>
                     <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MOVEUP</on_target_delete>
-                    <filter><![CDATA[SELECT PNRange AS p WHERE p.org_id = :this->org_id]]></filter>
+                    <filter><![CDATA[SELECT TipPNRange AS p WHERE p.org_id = :this->org_id]]></filter>
                 </field>
                 <field id="parent_name" xsi:type="AttributeExternalField">
                     <extkey_attcode>parent_id</extkey_attcode>
@@ -569,12 +684,33 @@
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
                 </field>
+                <field id="tippncountrycode_id" xsi:type="AttributeExternalKey">
+                    <sql>tippncountrycode_id</sql>
+                    <target_class>TipPNCountryCode</target_class>
+                    <is_null_allowed>false</is_null_allowed>
+                    <on_target_delete>DEL_MANUAL</on_target_delete>
+                    <jointype/>
+                </field>
+                <field id="tippncountrycode_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tippncountrycode_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+                <field id="calling_code" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tippncountrycode_id</extkey_attcode>
+                    <target_attcode>calling_code</target_attcode>
+                </field>
                 <field id="firstnumber" xsi:type="AttributePhoneNumber">
+                    <dependencies>
+                        <attribute id="tippncountrycode_id"/>
+                    </dependencies>
                     <sql>firstnumber</sql>
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
                 </field>
                 <field id="lastnumber" xsi:type="AttributePhoneNumber">
+                    <dependencies>
+                        <attribute id="tippncountrycode_id"/>
+                    </dependencies>
                     <sql>lastnumber</sql>
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
@@ -584,31 +720,31 @@
                     <default_value>0</default_value>
                     <is_null_allowed>true</is_null_allowed>
                 </field>
-                <field id="phonenumbers_list" xsi:type="AttributeLinkedSet">
-                    <linked_class>PhoneNumber</linked_class>
-                    <ext_key_to_me>pnrange_id</ext_key_to_me>
+                <field id="tipphonenumbers_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>TipPhoneNumber</linked_class>
+                    <ext_key_to_me>tippnrange_id</ext_key_to_me>
                     <edit_mode>none</edit_mode>
                 </field>
             </fields>
             <event_listeners>
-                <event_listener id="OnPNRangeComputeValuesRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNRangeComputeValuesRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_COMPUTE_VALUES</event>
-                    <callback>OnPNRangeComputeValuesRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPNRangeComputeValuesRequestedByPhoneNumberMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
-                <event_listener id="OnPNRangeSetAttributesFlagsRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNRangeSetAttributesFlagsRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_SET_ATTRIBUTES_FLAGS</event>
-                    <callback>OnPNRangeSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPNRangeSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
-                <event_listener id="OnPNRangeCheckToWriteRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNRangeCheckToWriteRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_CHECK_TO_WRITE</event>
-                    <callback>OnPNRangeCheckToWriteRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPNRangeCheckToWriteRequestedByPhoneNumberMgmt</callback>
                     <rank>110</rank>
                 </event_listener>
-                <event_listener id="OnPNRangeAfterWriteRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNRangeAfterWriteRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_AFTER_WRITE</event>
-                    <callback>OnPNRangeAfterWriteRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPNRangeAfterWriteRequestedByPhoneNumberMgmt</callback>
                     <rank>120</rank>
                 </event_listener>
             </event_listeners>
@@ -619,7 +755,7 @@
                         <item id="col:col1">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PNRange:baseinfo">
+                                <item id="fieldset:Class:TipPNRange:baseinfo">
                                     <rank>10</rank>
                                     <items>
                                         <item id="org_id">
@@ -650,10 +786,10 @@
                         <item id="col:col2">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PNRange:rangeinfo">
+                                <item id="fieldset:Class:TipPNRange:rangeinfo">
                                     <rank>10</rank>
                                     <items>
-                                        <item id="fieldset:Class:PNRange:delegationinfo">
+                                        <item id="fieldset:Class:TipPNRange:delegationinfo">
                                             <rank>10</rank>
                                             <items>
                                                 <item id="parent_org_id">
@@ -661,9 +797,12 @@
                                                 </item>
                                             </items>
                                         </item>
-                                        <item id="fieldset:Class:PNRange:numberinginfo">
+                                        <item id="fieldset:Class:TipPNRange:numberinginfo">
                                             <rank>20</rank>
                                             <items>
+                                                <item id="tippncountrycode_id">
+                                                    <rank>5</rank>
+                                                </item>
                                                 <item id="parent_id">
                                                     <rank>10</rank>
                                                 </item>
@@ -685,7 +824,7 @@
                         <item id="documents_list">
                             <rank>40</rank>
                         </item>
-                        <item id="phonenumbers_list">
+                        <item id="tipphonenumbers_list">
                             <rank>50</rank>
                         </item>
                     </items>
@@ -704,6 +843,9 @@
                         <item id="org_id">
                             <rank>40</rank>
                         </item>
+                        <item id="tippncountrycode_id">
+                            <rank>50</rank>
+                        </item>
                     </items>
                 </default_search>
                 <search>
@@ -719,6 +861,9 @@
                         </item>
                         <item id="org_id">
                             <rank>40</rank>
+                        </item>
+                        <item id="tippncountrycode_id">
+                            <rank>50</rank>
                         </item>
                     </items>
                 </search>
@@ -738,6 +883,9 @@
                         </item>
                         <item id="org_id">
                             <rank>50</rank>
+                        </item>
+                        <item id="tippncountrycode_id">
+                            <rank>55</rank>
                         </item>
                         <item id="allocation_date">
                             <rank>60</rank>
@@ -759,18 +907,18 @@
                 </summary>
             </presentation>
         </class>
-        <class id="PhoneNumber" _delta="define">
-            <parent>PNObject</parent>
+        <class id="TipPhoneNumber" _delta="define">
+            <parent>TipPNObject</parent>
             <php_parent>
-                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_PhoneNumber</name>
-                <file>src/Model/_PhoneNumber.php</file>
+                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_TipPhoneNumber</name>
+                <file>src/Model/_TipPhoneNumber.php</file>
             </php_parent>
             <properties>
                 <comment/>
                 <category>bizmodel,searchable,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>phonenumber</db_table>
+                <db_table>tipphonenumber</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field>finalclass</db_final_class_field>
                 <naming>
@@ -787,21 +935,32 @@
                         <attribute id="number"/>
                     </attributes>
                 </reconciliation>
+                <uniqueness_rules>
+                    <rule id="no_duplicate_number">
+                        <attributes>
+                            <attribute id="org_id"/>
+                            <attribute id="number"/>
+                        </attributes>
+                        <filter/>
+                        <disabled>false</disabled>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                </uniqueness_rules>
             </properties>
             <fields>
-                <field id="pnrange_id" xsi:type="AttributeExternalKey">
-                    <sql>pnrange_id</sql>
-                    <target_class>PNRange</target_class>
-                    <filter><![CDATA[SELECT PNRange AS p WHERE p.org_id = :this->org_id]]></filter>
+                <field id="tippnrange_id" xsi:type="AttributeExternalKey">
+                    <sql>tippnrange_id</sql>
+                    <target_class>TipPNRange</target_class>
+                    <filter><![CDATA[SELECT TipPNRange AS p WHERE p.org_id = :this->org_id]]></filter>
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
-                    <is_null_allowed>false</is_null_allowed>
+                    <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                     <jointype/>
                 </field>
-                <field id="pnrange_name" xsi:type="AttributeExternalField">
-                    <extkey_attcode>pnrange_id</extkey_attcode>
+                <field id="tippnrange_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tippnrange_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
                 <field id="number" xsi:type="AttributePhoneNumber">
@@ -809,26 +968,36 @@
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
                 </field>
-                <field id="pnextensions_list" xsi:type="AttributeLinkedSet">
-                    <linked_class>PNExtension</linked_class>
-                    <ext_key_to_me>phonenumber_id</ext_key_to_me>
+                <field id="tippnextensions_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>TipPNExtension</linked_class>
+                    <ext_key_to_me>tipphonenumber_id</ext_key_to_me>
                     <edit_mode>none</edit_mode>
                 </field>
             </fields>
             <event_listeners>
-                <event_listener id="OnPhoneNumberAfterWriteRequestedByPhoneNumberMgmt">
-                    <event>EVENT_DB_AFTER_WRITE</event>
-                    <callback>OnPhoneNumberAfterWriteRequestedByPhoneNumberMgmt</callback>
+                <event_listener id="OnTipPhoneNumberComputeValuesRequestedByPhoneNumberMgmt">
+                    <event>EVENT_DB_COMPUTE_VALUES</event>
+                    <callback>OnTipPhoneNumberComputeValuesRequestedByPhoneNumberMgmt</callback>
                     <rank>100</rank>
                 </event_listener>
-                <event_listener id="OnPhoneNumberAfterDeleteRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPhoneNumberCheckToWriteRequestedByPhoneNumberMgmt">
+                    <event>EVENT_DB_CHECK_TO_WRITE</event>
+                    <callback>OnTipPhoneNumberCheckToWriteRequestedByPhoneNumberMgmt</callback>
+                    <rank>100</rank>
+                </event_listener>
+                <event_listener id="OnTipPhoneNumberAfterWriteRequestedByPhoneNumberMgmt">
+                    <event>EVENT_DB_AFTER_WRITE</event>
+                    <callback>OnTipPhoneNumberAfterWriteRequestedByPhoneNumberMgmt</callback>
+                    <rank>100</rank>
+                </event_listener>
+                <event_listener id="OnTipPhoneNumberAfterDeleteRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_AFTER_DELETE</event>
-                    <callback>OnPhoneNumberAfterDeleteRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPhoneNumberAfterDeleteRequestedByPhoneNumberMgmt</callback>
                     <rank>110</rank>
                 </event_listener>
-                <event_listener id="OnPhoneNumberSetAttributesFlagsRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPhoneNumberSetAttributesFlagsRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_SET_ATTRIBUTES_FLAGS</event>
-                    <callback>OnPhoneNumberSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPhoneNumberSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
                     <rank>10</rank>
                 </event_listener>
             </event_listeners>
@@ -839,7 +1008,7 @@
                         <item id="col:col1">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PhoneNumber:baseinfo">
+                                <item id="fieldset:Class:TipPhoneNumber:baseinfo">
                                     <rank>10</rank>
                                     <items>
                                         <item id="org_id">
@@ -867,10 +1036,10 @@
                         <item id="col:col2">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PhoneNumber:numberinfo">
+                                <item id="fieldset:Class:TipPhoneNumber:numberinfo">
                                     <rank>10</rank>
                                     <items>
-                                        <item id="pnrange_id">
+                                        <item id="tippnrange_id">
                                             <rank>10</rank>
                                         </item>
                                         <item id="number">
@@ -886,7 +1055,7 @@
                         <item id="documents_list">
                             <rank>40</rank>
                         </item>
-                        <item id="pnextensions_list">
+                        <item id="tippnextensions_list">
                             <rank>50</rank>
                         </item>
                     </items>
@@ -896,7 +1065,7 @@
                         <item id="number">
                             <rank>10</rank>
                         </item>
-                        <item id="pnrange_id">
+                        <item id="tippnrange_id">
                             <rank>20</rank>
                         </item>
                         <item id="org_id">
@@ -909,7 +1078,7 @@
                         <item id="number">
                             <rank>10</rank>
                         </item>
-                        <item id="pnrange_id">
+                        <item id="tippnrange_id">
                             <rank>20</rank>
                         </item>
                         <item id="org_id">
@@ -922,7 +1091,7 @@
                         <item id="status">
                             <rank>10</rank>
                         </item>
-                        <item id="pnrange_id">
+                        <item id="tippnrange_id">
                             <rank>20</rank>
                         </item>
                         <item id="org_id">
@@ -935,33 +1104,36 @@
                 </list>
                 <summary>
                     <items>
+                        <item id="number">
+                            <rank>5</rank>
+                        </item>
                         <item id="status">
                             <rank>10</rank>
                         </item>
-                        <item id="pnrange_id">
+                        <item id="tippnrange_id">
                             <rank>20</rank>
                         </item>
                     </items>
                 </summary>
             </presentation>
         </class>
-        <class id="PNExtension" _delta="define">
-            <parent>PNObject</parent>
+        <class id="TipPNExtension" _delta="define">
+            <parent>TipPNObject</parent>
             <php_parent>
-                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_PNExtension</name>
-                <file>src/Model/_PNExtension.php</file>
+                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_TipPNExtension</name>
+                <file>src/Model/_TipPNExtension.php</file>
             </php_parent>
             <properties>
                 <comment/>
                 <category>bizmodel,searchable,pnmgmt</category>
                 <abstract>false</abstract>
                 <key_type>autoincrement</key_type>
-                <db_table>PNExtension</db_table>
+                <db_table>tippnextension</db_table>
                 <db_key_field>id</db_key_field>
                 <db_final_class_field>finalclass</db_final_class_field>
                 <naming>
                     <attributes>
-                        <attribute id="phonenumber_number"/>
+                        <attribute id="tipphonenumber_number"/>
                         <attribute id="code"/>
                     </attributes>
                 </naming>
@@ -971,16 +1143,16 @@
                 <reconciliation>
                     <attributes>
                         <attribute id="org_id"/>
-                        <attribute id="phonenumber_id"/>
+                        <attribute id="tipphonenumber_id"/>
                         <attribute id="code"/>
                     </attributes>
                 </reconciliation>
             </properties>
             <fields>
-                <field id="phonenumber_id" xsi:type="AttributeExternalKey">
-                    <sql>phonenumber_id</sql>
-                    <target_class>PhoneNumber</target_class>
-                    <filter><![CDATA[SELECT PhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
+                <field id="tipphonenumber_id" xsi:type="AttributeExternalKey">
+                    <sql>tipphonenumber_id</sql>
+                    <target_class>TipPhoneNumber</target_class>
+                    <filter><![CDATA[SELECT TipPhoneNumber AS p WHERE p.org_id = :this->org_id]]></filter>
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
@@ -988,8 +1160,8 @@
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                     <jointype/>
                 </field>
-                <field id="phonenumber_number" xsi:type="AttributeExternalField">
-                    <extkey_attcode>phonenumber_id</extkey_attcode>
+                <field id="tipphonenumber_number" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tipphonenumber_id</extkey_attcode>
                     <target_attcode>number</target_attcode>
                 </field>
                 <field id="code" xsi:type="AttributeString">
@@ -999,9 +1171,9 @@
                 </field>
             </fields>
             <event_listeners>
-                <event_listener id="OnPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt">
+                <event_listener id="OnTipPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt">
                     <event>EVENT_DB_SET_ATTRIBUTES_FLAGS</event>
-                    <callback>OnPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
+                    <callback>OnTipPNExtensionSetAttributesFlagsRequestedByPhoneNumberMgmt</callback>
                     <rank>10</rank>
                 </event_listener>
             </event_listeners>
@@ -1012,7 +1184,7 @@
                         <item id="col:col1">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PNExtension:baseinfo">
+                                <item id="fieldset:Class:TipPNExtension:baseinfo">
                                     <rank>10</rank>
                                     <items>
                                         <item id="org_id">
@@ -1040,10 +1212,10 @@
                         <item id="col:col2">
                             <rank>10</rank>
                             <items>
-                                <item id="fieldset:Class:PNExtension:numberinfo">
+                                <item id="fieldset:Class:TipPNExtension:numberinfo">
                                     <rank>10</rank>
                                     <items>
-                                        <item id="phonenumber_id">
+                                        <item id="tipphonenumber_id">
                                             <rank>10</rank>
                                         </item>
                                         <item id="code">
@@ -1066,7 +1238,7 @@
                         <item id="number">
                             <rank>10</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>20</rank>
                         </item>
                         <item id="org_id">
@@ -1079,7 +1251,7 @@
                         <item id="number">
                             <rank>10</rank>
                         </item>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>20</rank>
                         </item>
                         <item id="org_id">
@@ -1089,7 +1261,7 @@
                 </search>
                 <list>
                     <items>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>10</rank>
                         </item>
                         <item id="org_id">
@@ -1102,7 +1274,7 @@
                 </list>
                 <summary>
                     <items>
-                        <item id="phonenumber_id">
+                        <item id="tipphonenumber_id">
                             <rank>10</rank>
                         </item>
                     </items>
@@ -1111,15 +1283,15 @@
         </class>
     </classes>
     <menus>
-        <menu id="TelephonyManagement" xsi:type="MenuGroup" _delta="define">
+        <menu id="TipTelephonyManagement" xsi:type="MenuGroup" _delta="define">
             <rank>32</rank>
             <style>
                 <decoration_classes>fa fa-phone</decoration_classes>
             </style>
         </menu>
-        <menu id="TelephonySpace" xsi:type="DashboardMenuNode" _delta="define">
+        <menu id="TipTelephonySpace" xsi:type="DashboardMenuNode" _delta="define">
             <rank>10</rank>
-            <parent>TelephonyManagement</parent>
+            <parent>TipTelephonyManagement</parent>
             <definition>
                 <layout>DashboardLayoutOneCol</layout>
                 <title/>
@@ -1129,70 +1301,90 @@
                         <dashlets>
                             <dashlet id="teemip-110" xsi:type="DashletHeaderStatic">
                                 <rank>10</rank>
-                                <title>Menu:TelephonySpace:PNObjects</title>
+                                <title>Menu:TipTelephonySpace:PNObjects</title>
                                 <icon>teemip-phone-number-mgmt/asset/img/icons8-internet-folder-48.png</icon>
                             </dashlet>
                             <dashlet id="teemip-120" xsi:type="DashletBadge">
                                 <rank>20</rank>
-                                <class>PNRange</class>
+                                <class>TipPNRange</class>
                             </dashlet>
                             <dashlet id="teemip-130" xsi:type="DashletBadge">
                                 <rank>30</rank>
-                                <class>PhoneNumber</class>
+                                <class>TipPhoneNumber</class>
                             </dashlet>
                             <dashlet id="teemip-140" xsi:type="DashletBadge">
                                 <rank>40</rank>
-                                <class>PNExtension</class>
+                                <class>TipPNExtension</class>
                             </dashlet>
                         </dashlets>
                     </cell>
                 </cells>
             </definition>
         </menu>
-        <menu id="NewPNObject" xsi:type="NewObjectMenuNode" _delta="define">
+        <menu id="NewTipPNObject" xsi:type="NewObjectMenuNode" _delta="define">
             <rank>20</rank>
-            <parent>TelephonyManagement</parent>
-            <class>PNObject</class>
+            <parent>TipTelephonyManagement</parent>
+            <class>TipPNObject</class>
         </menu>
-        <menu id="SearchPNObject" xsi:type="SearchMenuNode" _delta="define">
+        <menu id="SearchTipPNObject" xsi:type="SearchMenuNode" _delta="define">
             <rank>30</rank>
-            <parent>TelephonyManagement</parent>
-            <class>PNObject</class>
+            <parent>TipTelephonyManagement</parent>
+            <class>TipPNObject</class>
         </menu>
-        <menu id="PNRange" xsi:type="OQLMenuNode" _delta="define">
+        <menu id="TipPNRange" xsi:type="OQLMenuNode" _delta="define">
             <rank>40</rank>
-            <parent>TelephonyManagement</parent>
-            <oql>SELECT PNRange</oql>
+            <parent>TipTelephonyManagement</parent>
+            <oql>SELECT TipPNRange</oql>
             <do_search>1</do_search>
             <auto_reload>fast</auto_reload>
         </menu>
-        <menu id="PhoneNumber" xsi:type="OQLMenuNode" _delta="define">
+        <menu id="TipPhoneNumber" xsi:type="OQLMenuNode" _delta="define">
             <rank>50</rank>
-            <parent>TelephonyManagement</parent>
-            <oql>SELECT PhoneNumber</oql>
+            <parent>TipTelephonyManagement</parent>
+            <oql>SELECT TipPhoneNumber</oql>
             <do_search>1</do_search>
             <auto_reload>fast</auto_reload>
         </menu>
-        <menu id="PNExtension" xsi:type="OQLMenuNode" _delta="define">
+        <menu id="TipPNExtension" xsi:type="OQLMenuNode" _delta="define">
             <rank>60</rank>
-            <parent>TelephonyManagement</parent>
-            <oql>SELECT PNExtension</oql>
+            <parent>TipTelephonyManagement</parent>
+            <oql>SELECT TipPNExtension</oql>
             <do_search>1</do_search>
             <auto_reload>fast</auto_reload>
+        </menu>
+        <menu id="Typology" xsi:type="DashboardMenuNode" _delta="must_exist">
+            <definition>
+                <cells>
+                    <cell id="PNMgmt" _delta="define">
+                        <rank>9</rank>
+                        <dashlets>
+                            <dashlet id="teemip-5301" xsi:type="DashletHeaderStatic">
+                                <rank>0</rank>
+                                <title>Menu:PNMgmt:Typology</title>
+                                <icon>teemip-phone-number-mgmt/asset/img/icons8-internet-folder-48.png</icon>
+                            </dashlet>
+                            <dashlet id="teemip-5302" xsi:type="DashletBadge">
+                                <rank>1</rank>
+                                <class>TipPNCountryCode</class>
+                            </dashlet>
+                        </dashlets>
+                    </cell>
+                </cells>
+            </definition>
         </menu>
     </menus>
     <user_rights>
         <groups>
-            <group id="PNObject" _delta="define">
+            <group id="TipPNObject" _delta="define">
                 <classes>
-                    <class id="PNObject"/>
+                    <class id="TipPNObject"/>
                 </classes>
             </group>
-            <group id="LnkToPNObject" _delta="define">
+            <group id="LnkToTipPNObject" _delta="define">
                 <classes>
-                    <class id="lnkContactToPNObject"/>
-                    <class id="lnkDocToPNObject"/>
-                    <class id="lnkPNObjectToTicket"/>
+                    <class id="lnkContactToTipPNObject"/>
+                    <class id="lnkDocToTipPNObject"/>
+                    <class id="lnkTipPNObjectToTicket"/>
                 </classes>
             </group>
         </groups>
@@ -1201,7 +1393,7 @@
                 <name>Phone Numbers Manager</name>
                 <description>Person in charge of the phone numbers space</description>
                 <groups>
-                    <group id="PNObject">
+                    <group id="TipPNObject">
                         <actions>
                             <action id="action:write">allow</action>
                             <action id="action:bulk write">allow</action>
@@ -1209,7 +1401,7 @@
                             <action id="action:bulk delete">allow</action>
                         </actions>
                     </group>
-                    <group id="LnkToPNObject">
+                    <group id="LnkToTipPNObject">
                         <actions>
                             <action id="action:write">allow</action>
                             <action id="action:bulk write">allow</action>

@@ -16,7 +16,7 @@ SetupWebPage::AddModule(
         // Setup
         //
         'dependencies' => array(
-            'teemip-framework/3.2.1',
+            'teemip-framework/3.3.0',
         ),
         'mandatory' => false,
         'visible' => true,
@@ -29,7 +29,8 @@ SetupWebPage::AddModule(
             'src/Hook/PhoneNumberMgmtOtherActions.php',
             'model.teemip-phone-number-mgmt.php',
         ),
-        'data.struct' => array(//'data.struct.IPAudit.xml',
+        'data.struct' => array(
+            'data/data.struct.TipPNCountryCode.xml',
         ),
         'data.sample' => array(
         ),
