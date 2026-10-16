@@ -22,6 +22,7 @@ SetupWebPage::AddModule(
         'mandatory' => false,
         'visible' => false,
         'auto_select' => 'SetupInfo::ModuleIsSelected("teemip-phone-number-mgmt") && SetupInfo::ModuleIsSelected("teemip-endusers-devices-adaptor")',
+        'installer' => 'EndUsersDevicesExtendedInstaller',
 
         // Components
         //
@@ -44,3 +45,31 @@ SetupWebPage::AddModule(
 );
 
 
+                $sLang = null;
+                // Try to get app. language from configuration file (app. upgrade)
+                $sConfigFileName = APPCONF.'production/'.ITOP_CONFIG_FILE;
+                if (file_exists($sConfigFileName)) {
+                    $oFileConfig = new Config($sConfigFileName);
+                    if (is_object($oFileConfig)) {
+                        $sLang = str_replace(' ', '_', strtolower($oFileConfig->GetDefaultLanguage()));
+                    }
+                }
+
+                // If still no language, get the default one
+                if (null === $sLang) {
+                    $sLang = str_replace(' ', '_', strtolower($oConfiguration->GetDefaultLanguage()));
+                }
+
+                $sFileName = dirname(__FILE__)."/data/".$sLang.".data.teemip-endusers-devices-extended.xml";
+                SetupLog::Info("Searching file: $sFileName");
+                if (!file_exists($sFileName)) {
+                    $sFileName = dirname(__FILE__)."/data/en_us.data.teemip-endusers-devices-extended.xml";
+                }
+                SetupLog::Info("Loading file: $sFileName");
+                $oDataLoader->StartSession($oMyChange);
+                $oDataLoader->LoadFile($sFileName, false, true);
+                $oDataLoader->EndSession();
+            }
+        }
+    }
+}

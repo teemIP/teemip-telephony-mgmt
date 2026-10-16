@@ -43,26 +43,20 @@ class PhoneNumberMgmtOtherActions implements iPopupMenuExtension
 				$sClass = $oSet->GetClass();
 
 				if ($sClass == 'TipPNRange') {
-					// Additional actions for TipPNRange
-					$operation = utils::ReadParam('operation', '');
-
-                    $oAppContext = new ApplicationContext();
-                    $iOrgId = $oAppContext->GetCurrentValue('org_id');
-                    $sFilter = $param->GetFilter()->serialize();
- 					switch ($operation) {
-						case 'displaytree':
-							$aResult[] = new SeparatorPopupMenuItem();
-							$aParams['operation'] = 'displaylist';
-							$sMenu = 'UI:PNManagement:Action:DisplayList:TipPNRange';
-                            $aResult[] = new URLPopupMenuItem($sMenu, Dict::S($sMenu), utils::GetAbsoluteUrlAppRoot()."pages/UI.php?route=phone_number_mgmt.display_tree&params=$sParam");
-							break;
-
-						case 'displaylist':
-						default:
-							$aResult[] = new SeparatorPopupMenuItem();
-							$sMenu = 'UI:PNManagement:Action:DisplayTree:TipPNRange';
-                            $aResult[] = new URLPopupMenuItem($sMenu, Dict::S($sMenu), utils::GetAbsoluteUrlAppRoot()."pages/UI.php?route=phone_number_mgmt.display_tree&org_id=$iOrgId&filter=$sFilter");
-							break;
+					// Additional actions for TipPNRange: switch between list and tree display
+					$oAppContext = new ApplicationContext();
+					$aParams = $oAppContext->GetAsHash();
+					$aResult[] = new SeparatorPopupMenuItem();
+					if (utils::ReadParam('operation', '') == 'displaytree') {
+						// Serialized filter is already url encoded and DBSearch::unserialize() decodes it again
+						$aParams['operation'] = 'search';
+						$aParams['filter'] = $oSet->GetFilter()->serialize();
+						$sMenu = 'UI:PNManagement:Action:DisplayList:TipPNRange';
+						$aResult[] = new URLPopupMenuItem($sMenu, Dict::S($sMenu), utils::GetAbsoluteUrlAppRoot().'pages/UI.php?'.http_build_query($aParams));
+					} else {
+						$aParams['operation'] = 'displaytree';
+						$sMenu = 'UI:PNManagement:Action:DisplayTree:TipPNRange';
+						$aResult[] = new URLPopupMenuItem($sMenu, Dict::S($sMenu), utils::GetAbsoluteUrlModulePage(static::MODULE_CODE, 'ui.teemip-phone-number-mgmt.php', $aParams));
 					}
 				}
 				break;

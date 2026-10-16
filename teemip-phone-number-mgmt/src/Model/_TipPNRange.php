@@ -15,6 +15,7 @@ use Dict;
 use MetaModel;
 use TipPNObject;
 use TeemIp\TeemIp\Extension\PhoneNumberManagement\Helper\PhoneNumberUtils;
+use TipPNRange;
 
 class _TipPNRange extends TipPNObject {
     /**
@@ -112,17 +113,17 @@ class _TipPNRange extends TipPNObject {
             $oParent = MetaModel::GetObject('TipPNRange', $iParentId);
             if ($oParent) {
                 if ($oParent->Get('tippncountrycode_id') != $this->Get('tippncountrycode_id')) {
-                    $this->AddCheckIssue(Dict::S('UI:PNManagement:Action:New:TipPNRange:NotSameCountryAsParent'));
-                    return;
-                }
-                if (!PhoneNumberUtils::IsSameLength($sFirstNumber, $oParent->Get('firstnumber'))) {
-                    $this->AddCheckIssue(Dict::S('UI:PNManagement:Action:New:TipPNRange:NotInParent'));
+                    $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPNRange:NotSameCountryAsParent', $oParent->Get('tippncountrycode_name')));
                     return;
                 }
                 $sParentFirstNumber = $oParent->Get('firstnumber');
                 $sParentLastNumber = $oParent->Get('lastnumber');
+                if (!PhoneNumberUtils::IsSameLength($sFirstNumber, $sParentFirstNumber)) {
+                    $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPNRange:NotInParent', $sParentFirstNumber, $sParentLastNumber));
+                    return;
+                }
                 if (($sFirstNumber < $sParentFirstNumber) || ($sParentLastNumber < $sLastNumber) || (($sFirstNumber == $sParentFirstNumber) && ($sParentLastNumber == $sLastNumber))) {
-                    $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPNRange:NotInParent'));
+                    $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPNRange:NotInParent',$sParentFirstNumber, $sParentLastNumber));
                     return;
                 }
             }
@@ -354,6 +355,8 @@ class _TipPNRange extends TipPNObject {
             'firstnumber' => $sFirstNumber,
             'lastnumber' => $sLastNumber,
         ));
+
+        /** @var TipPNRange $oSmallestPNRange */
         $oSmallestPNRange = null;
         $iMinSize = 0;
         while ($oPNRange = $oPNRangeSet->Fetch()) {
@@ -370,6 +373,26 @@ class _TipPNRange extends TipPNObject {
         }
 
         return $oSmallestPNRange;
+    }
+
+    /**
+     * Get the prefix shared by all numbers of the range, i.e. the longest common prefix of first and last numbers
+     *
+     * @return string
+     */
+    public function GetPrefix(): string
+    {
+        $sFirstNumber = $this->Get('firstnumber');
+        $sLastNumber = $this->Get('lastnumber');
+        if (!PhoneNumberUtils::IsSameLength($sFirstNumber, $sLastNumber)) {
+            return '';
+        }
+        $iLength = 0;
+        while (($iLength < strlen($sFirstNumber)) && ($sFirstNumber[$iLength] == $sLastNumber[$iLength])) {
+            $iLength++;
+        }
+
+        return substr($sFirstNumber, 0, $iLength);
     }
 
     /**

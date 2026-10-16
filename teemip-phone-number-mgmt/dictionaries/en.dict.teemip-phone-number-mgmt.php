@@ -224,12 +224,12 @@ Dict::Add('EN US', 'English', 'English', array(
     // Creation Management
     'UI:PNManagement:Action:New:Domain:NameCollision' => 'Domain name already exists!',
     'UI:PNManagement:Action:New:TipPhoneNumber:NotE164' => '%1$s is not a valid international number. Expected format: +<country code><number> (e.g. +33123456789)',
-    'UI:PNManagement:Action:New:TipPhoneNumber:NotInRange' => 'Number %1$s doesn\'t belong to range %2$s',
+    'UI:PNManagement:Action:New:TipPhoneNumber:NotInRange' => 'Number %1$s doesn\'t belong to range %2$s (%3$s - %4$s)',
     'UI:PNManagement:Action:New:TipPNRange:NotSameLength' => 'First and last numbers of the range must have the same number of digits',
     'UI:PNManagement:Action:New:TipPNRange:WrongCallingCode' => 'Numbers of the range must start with +%1$s, the calling code of %2$s',
-    'UI:PNManagement:Action:New:TipPNRange:NotSameCountryAsParent' => 'Range must belong to the same country as its parent range',
+    'UI:PNManagement:Action:New:TipPNRange:NotSameCountryAsParent' => 'Range must belong to the same country as its parent range: %1$s',
     'UI:PNManagement:Action:New:TipPNRange:Reverted' => 'First number of the range must be smaller than the last one',
-    'UI:PNManagement:Action:New:TipPNRange:NotInParent' => 'Range must be strictly included in its parent range',
+    'UI:PNManagement:Action:New:TipPNRange:NotInParent' => 'Range must be strictly included in its parent range: %1$s - %2$s',
     'UI:PNManagement:Action:New:TipPNRange:Collision0' => 'Range already exists',
     'UI:PNManagement:Action:New:TipPNRange:Collision1' => 'First number of the range collides with another range',
     'UI:PNManagement:Action:New:TipPNRange:Collision2' => 'Last number of the range collides with another range',
@@ -238,9 +238,9 @@ Dict::Add('EN US', 'English', 'English', array(
     // Display tree of PNRanges
     'UI:PNManagement:Action:DisplayTree:TipPNRange' => 'Display Tree',
     'UI:PNManagement:Action:DisplayTree:TipPNRange+' => '',
-    'teemip-phone-number-mgmt/Operation:DisplayTree/Title' => 'Display Tree',
-    'UI:PhoneNumberManagement:Action:DisplayTree:Title' => 'Phone Number Ranges',
     'UI:IPManagement:Action:DisplayTree:TipPNRange:OrgName' => 'Organization %1$s',
+    'UI:IPManagement:Action:DisplayTree:TipPNRange:PageTitle_Class' => 'Phone Number Ranges',
+    'UI:IPManagement:Action:DisplayTree:TipPNRange:Title_Class' => 'Phone Number Ranges',
 
     // Display pointers to previous and next PNRanges
     'UI:PNManagement:Action:DisplayPrevious:TipPNRange' => 'Previous',
@@ -250,17 +250,20 @@ Dict::Add('EN US', 'English', 'English', array(
     'UI:PNManagement:Action:DisplayPrevious:TipPhoneNumber' => 'Previous',
     'UI:PNManagement:Action:DisplayNext:TipPhoneNumber' => 'Next',
 
+    // Un-allocate PhoneNumbers from CIs
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber' => 'Un-allocate number from all CIs',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:PageTitle_Object_Class' => 'Un-allocate phone number',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:Done' => '%1$s %2$s has been un-allocated.',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:CannotBeUnallocated' => 'Number cannot be un-allocated: %1$s',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:NumberNotAllocated' => 'Number is not allocated!',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsReadOnly' => 'Number is attached to an attribute of CI %1$s that is read only!',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsSynchronized' => 'Number is attached to an attribute of CI %1$s that is slave of a synchronization!',
+    'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsMandatory' => 'Number is attached to a mandatory attribute of CI %1$s!',
+
 
     'UI:PNManagement:Action:DisplayList:TipPNRange' => 'Display List',
     'UI:PNManagement:Action:DisplayList:TipPNRange+' => '',
     'UI:IPManagement:Action:DisplayList:TipPNRange:PageTitle_Class' => 'Phone Number Ranges',
     'UI:PNManagement:Action:DisplayList:TipPNRange:Title_Class' => 'Phone Number Ranges',
-
-    // Display tree of PNRanges
-    'UI:PNManagement:Action:DisplayTree:TipPNRange' => 'Display Tree',
-    'UI:PNManagement:Action:DisplayTree:TipPNRange+' => '',
-    'UI:IPManagement:Action:DisplayTree:TipPNRange:PageTitle_Class' => 'Phone Number Ranges',
-    'UI:IPManagement:Action:DisplayTree:TipPNRange:Title_Class' => 'Phone Number Ranges',
-
 
 ));

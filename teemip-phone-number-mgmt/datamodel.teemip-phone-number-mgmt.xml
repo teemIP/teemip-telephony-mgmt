@@ -618,6 +618,10 @@
                     <attributes>
                         <attribute id="name"/>
                     </attributes>
+                    <complementary_attributes>
+                        <attribute id="firstnumber"/>
+                        <attribute id="lastnumber"/>
+                    </complementary_attributes>
                 </naming>
                 <style>
                     <icon>asset/img/icons8-outgoing-call.svg</icon>
@@ -673,7 +677,7 @@
                     <sql>parent_id</sql>
                     <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MOVEUP</on_target_delete>
-                    <filter><![CDATA[SELECT TipPNRange AS p WHERE p.org_id = :this->org_id]]></filter>
+                    <filter><![CDATA[SELECT TipPNRange AS p WHERE p.org_id = :this->org_id AND p.tipcountrycode_id = :this->tipcountrycode_id]]></filter>
                 </field>
                 <field id="parent_name" xsi:type="AttributeExternalField">
                     <extkey_attcode>parent_id</extkey_attcode>
@@ -967,6 +971,9 @@
                     <sql>number</sql>
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
+                    <dependencies>
+                        <attribute id="tippnrange_id"/>
+                    </dependencies>
                 </field>
                 <field id="tippnextensions_list" xsi:type="AttributeLinkedSet">
                     <linked_class>TipPNExtension</linked_class>

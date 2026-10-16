@@ -25,7 +25,7 @@ class _TipPhoneNumber extends TipPNObject {
     /**
      * @inheritdoc
      */
-    public function DisplayBareRelations(WebPage $oPage, $bEditMode = false)
+    public function DisplayBareRelations($oPage, $bEditMode = false)
     {
         // Execute parent function first
         parent::DisplayBareRelations($oPage, $bEditMode);
@@ -120,6 +120,7 @@ class _TipPhoneNumber extends TipPNObject {
     /**
      * Handler for EVENT_DB_COMPUTE_VALUES event
      *   . Store number in E.164 format
+     *   . At creation, prefill number with the prefix of the selected range
      *   . Attach number to the smallest range of the organization that contains it, if no range is set yet
      *
      * @param EventData $oEventData
@@ -132,11 +133,44 @@ class _TipPhoneNumber extends TipPNObject {
             $this->Set('number', $sNumber);
         }
 
+        $aEventData = $oEventData->GetEventData();
+        if ($aEventData['is_new']) {
+            $this->PrefillNumberWithRangePrefix();
+            $sNumber = $this->Get('number');
+        }
+
         if (($this->Get('tippnrange_id') == 0) && PhoneNumberUtils::IsE164($sNumber)) {
             $oPNRange = TipPNRange::FindSmallestRangeContaining($this->Get('org_id'), $sNumber);
             if ($oPNRange !== null) {
                 $this->Set('tippnrange_id', $oPNRange->GetKey());
             }
+        }
+    }
+
+    /**
+     * Prefill number with the prefix shared by all numbers of the selected range.
+     * Number is only replaced when it is empty or incomplete (shorter than the range's numbers) and does not already start with the prefix.
+     * As number depends on tippnrange_id, this is also applied when the range is changed in the creation form.
+     *
+     * @return void
+     */
+    protected function PrefillNumberWithRangePrefix(): void
+    {
+        $iPNRangeId = $this->Get('tippnrange_id');
+        if ($iPNRangeId == 0) {
+            return;
+        }
+        $oPNRange = MetaModel::GetObject('TipPNRange', $iPNRangeId, false /* MustBeFound */);
+        if ($oPNRange === null) {
+            return;
+        }
+        $sPrefix = $oPNRange->GetPrefix();
+        if ($sPrefix == '') {
+            return;
+        }
+        $sNumber = $this->Get('number');
+        if (($sNumber == '') || ((strlen($sNumber) < strlen($oPNRange->Get('firstnumber'))) && !str_starts_with($sNumber, $sPrefix))) {
+            $this->Set('number', $sPrefix);
         }
     }
 
@@ -165,7 +199,7 @@ class _TipPhoneNumber extends TipPNObject {
         if ($iPNRangeId != 0) {
             $oPNRange = MetaModel::GetObject('TipPNRange', $iPNRangeId, false /* MustBeFound */);
             if (($oPNRange !== null) && !TipPNRange::IsInRange($sNumber, $oPNRange->Get('firstnumber'), $oPNRange->Get('lastnumber'))) {
-                $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPhoneNumber:NotInRange', $sNumber, $oPNRange->GetName()));
+                $this->AddCheckIssue(Dict::Format('UI:PNManagement:Action:New:TipPhoneNumber:NotInRange', $sNumber, $oPNRange->GetName(), $oPNRange->Get('firstnumber'), $oPNRange->Get('lastnumber')));
             }
         }
     }
