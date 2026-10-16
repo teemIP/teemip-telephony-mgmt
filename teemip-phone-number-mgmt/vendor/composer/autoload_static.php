@@ -22,7 +22,6 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Controller\\PhoneNumberMgmtController' => __DIR__ . '/../..' . '/src/Controller/PhoneNumberMgmtController.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Helper\\PhoneNumberUtils' => __DIR__ . '/../..' . '/src/Helper/PhoneNumberUtils.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\PhoneNumberMgmtOtherActions' => __DIR__ . '/../..' . '/src/Hook/PhoneNumberMgmtOtherActions.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNExtension' => __DIR__ . '/../..' . '/src/Model/_TipPNExtension.php',

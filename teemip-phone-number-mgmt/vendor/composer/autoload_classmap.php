@@ -7,7 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Controller\\PhoneNumberMgmtController' => $baseDir . '/src/Controller/PhoneNumberMgmtController.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Helper\\PhoneNumberUtils' => $baseDir . '/src/Helper/PhoneNumberUtils.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\PhoneNumberMgmtOtherActions' => $baseDir . '/src/Hook/PhoneNumberMgmtOtherActions.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNExtension' => $baseDir . '/src/Model/_TipPNExtension.php',
