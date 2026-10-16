@@ -6,7 +6,7 @@
 
 SetupWebPage::AddModule(
     __FILE__, // Path to the current file, all other file names are relative to the directory containing this file
-    'teemip-endusers-devices-extended/1.0.0-dev',
+    'teemip-endusers-devices-extended/1.0.1-dev',
     array(
         // Identification
         //
@@ -44,6 +44,25 @@ SetupWebPage::AddModule(
     )
 );
 
+if (!class_exists('EndUsersDevicesExtendedInstaller')) {
+    // Module installation handler
+    //
+    class EndUsersDevicesExtendedInstaller extends ModuleInstallerAPI
+    {
+        /**
+         * Handler called after the creation/update of the database schema
+         * @param $oConfiguration Config The new configuration of the application
+         * @param $sPreviousVersion string Previous version number of the module (empty string in case of first install)
+         * @param $sCurrentVersion string Current version number of the module
+         */
+        public static function AfterDatabaseCreation(Config $oConfiguration, $sPreviousVersion, $sCurrentVersion)
+        {
+            // Load audit domain, categories and rules related to the module
+            if (version_compare($sPreviousVersion, $sCurrentVersion, '!=')) {
+                $oDataLoader = new XMLDataLoader();
+
+                CMDBObject::SetTrackInfo("Initialization");
+                $oMyChange = CMDBObject::GetCurrentChange();
 
                 $sLang = null;
                 // Try to get app. language from configuration file (app. upgrade)

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Set>
+	<AuditDomain alias="AuditDomain" id="1">
+		<name>Téléphonie</name>
+		<description>Audit des numéros de téléphone utilisés par les CIs</description>
+	</AuditDomain>
+	<AuditCategory alias="AuditCategory" id="1">
+		<name>Cartes SIM</name>
+		<description>Ensemble de règles liées aux numéros de téléphone des cartes SIM</description>
+		<definition_set><![CDATA[SELECT TipSimCard]]></definition_set>
+	</AuditCategory>
+	<lnkAuditCategoryToAuditDomain alias="lnkAuditCategoryToAuditDomain" id="1">
+		<domain_id>1</domain_id>
+		<category_id>1</category_id>
+	</lnkAuditCategoryToAuditDomain>
+	<AuditRule alias="AuditRule" id="1">
+		<name>Cartes SIM sans numéro de téléphone</name>
+		<description>Liste les cartes SIM qui n'ont pas de numéro de téléphone</description>
+		<query><![CDATA[SELECT TipSimCard AS c WHERE c.tipphonenumber_id = 0]]></query>
+		<valid_flag>false</valid_flag>
+		<category_id>1</category_id>
+	</AuditRule>
+	<AuditCategory alias="AuditCategory" id="2">
+		<name>Téléphones</name>
+		<description>Ensemble de règles liées aux numéros de téléphone des téléphones</description>
+		<definition_set><![CDATA[SELECT Phone]]></definition_set>
+	</AuditCategory>
+	<lnkAuditCategoryToAuditDomain alias="lnkAuditCategoryToAuditDomain" id="2">
+		<domain_id>1</domain_id>
+		<category_id>2</category_id>
+	</lnkAuditCategoryToAuditDomain>
+	<AuditRule alias="AuditRule" id="2">
+		<name>Téléphones sans numéro de téléphone</name>
+		<description>Liste les téléphones qui n'ont pas de numéro de téléphone</description>
+		<query><![CDATA[SELECT Phone AS c WHERE c.tipphonenumber_id = 0]]></query>
+		<valid_flag>false</valid_flag>
+		<category_id>2</category_id>
+	</AuditRule>
+	<AuditCategory alias="AuditCategory" id="3">
+		<name>Téléphones mobiles</name>
+		<description>Ensemble de règles liées aux numéros de téléphone des téléphones mobiles</description>
+		<definition_set><![CDATA[SELECT MobilePhone]]></definition_set>
+	</AuditCategory>
+	<lnkAuditCategoryToAuditDomain alias="lnkAuditCategoryToAuditDomain" id="3">
+		<domain_id>1</domain_id>
+		<category_id>3</category_id>
+	</lnkAuditCategoryToAuditDomain>
+	<AuditRule alias="AuditRule" id="3">
+		<name>Téléphones mobiles sans numéro de téléphone</name>
+		<description>Liste les téléphones mobiles qui n'ont pas de numéro de téléphone</description>
+		<query><![CDATA[SELECT MobilePhone AS c WHERE c.tipphonenumber_id = 0]]></query>
+		<valid_flag>false</valid_flag>
+		<category_id>3</category_id>
+	</AuditRule>
+	<AuditCategory alias="AuditCategory" id="4">
+		<name>Téléphones IP</name>
+		<description>Ensemble de règles liées aux numéros de téléphone des téléphones IP</description>
+		<definition_set><![CDATA[SELECT IPPhone]]></definition_set>
+	</AuditCategory>
+	<lnkAuditCategoryToAuditDomain alias="lnkAuditCategoryToAuditDomain" id="4">
+		<domain_id>1</domain_id>
+		<category_id>4</category_id>
+	</lnkAuditCategoryToAuditDomain>
+	<AuditRule alias="AuditRule" id="4">
+		<name>Téléphones IP sans numéro de téléphone</name>
+		<description>Liste les téléphones IP qui n'ont pas de numéro de téléphone</description>
+		<query><![CDATA[SELECT IPPhone AS c WHERE c.tipphonenumber_id = 0]]></query>
+		<valid_flag>false</valid_flag>
+		<category_id>4</category_id>
+	</AuditRule>
+</Set>
