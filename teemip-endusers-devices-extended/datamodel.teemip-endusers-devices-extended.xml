@@ -96,7 +96,7 @@
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
-                    <is_null_allowed>false</is_null_allowed>
+                    <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                     <jointype/>
                 </field>
@@ -517,7 +517,7 @@
                     <dependencies>
                         <attribute id="org_id"/>
                     </dependencies>
-                    <is_null_allowed>false</is_null_allowed>
+                    <is_null_allowed>true</is_null_allowed>
                     <on_target_delete>DEL_MANUAL</on_target_delete>
                     <jointype/>
                 </field>

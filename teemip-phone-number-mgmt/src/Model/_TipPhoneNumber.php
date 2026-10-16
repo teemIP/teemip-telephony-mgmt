@@ -118,6 +118,63 @@ class _TipPhoneNumber extends TipPNObject {
     }
 
     /**
+     * Check if phone number can be unallocated from all CIs
+     *
+     * @return string error message, empty if number can be unallocated
+     * @throws \CoreException
+     * @throws \OQLException
+     */
+    public function DoCheckToUnallocate(): string
+    {
+        // Make sure number is allocated
+        if ($this->Get('status') != 'allocated') {
+            return Dict::S('UI:PNManagement:Action:UnAllocate:TipPhoneNumber:NumberNotAllocated');
+        }
+
+        // Check if number is attached to at least one CI's attribute that cannot be emptied
+        foreach ($this->GetHostingCIs() as $aHostingCI) {
+            $oCI = $aHostingCI['ci'];
+            $sPNAttribute = $aHostingCI['pn_attribute'];
+            $iFlags = $oCI->GetAttributeFlags($sPNAttribute);
+            if ($iFlags & OPT_ATT_SLAVE) {
+                // Attribute is read only because of a synchro
+                return Dict::Format('UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsSynchronized', $oCI->GetName());
+            }
+            if ($iFlags & OPT_ATT_READONLY) {
+                return Dict::Format('UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsReadOnly', $oCI->GetName());
+            }
+            if (!MetaModel::GetAttributeDef(get_class($oCI), $sPNAttribute)->IsNullAllowed()) {
+                return Dict::Format('UI:PNManagement:Action:UnAllocate:TipPhoneNumber:AttributeIsMandatory', $oCI->GetName());
+            }
+        }
+
+        return '';
+    }
+
+    /**
+     * Unallocate phone number from all CIs and release it
+     *
+     * @return void
+     * @throws \CoreCannotSaveObjectException
+     * @throws \CoreException
+     * @throws \CoreUnexpectedValue
+     * @throws \OQLException
+     */
+    public function DoUnallocate(): void
+    {
+        // Remove from CIs
+        foreach ($this->GetHostingCIs() as $aHostingCI) {
+            $oCI = $aHostingCI['ci'];
+            $oCI->Set($aHostingCI['pn_attribute'], 0);
+            $oCI->DBUpdate();
+        }
+
+        // Update number status - release_date is managed at TipPNObject level
+        $this->Set('status', 'released');
+        $this->DBUpdate();
+    }
+
+    /**
      * Handler for EVENT_DB_COMPUTE_VALUES event
      *   . Store number in E.164 format
      *   . At creation, prefill number with the prefix of the selected range
