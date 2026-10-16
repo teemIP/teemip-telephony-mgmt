@@ -8,7 +8,10 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Helper\\PhoneNumberUtils' => $baseDir . '/src/Helper/PhoneNumberUtils.php',
+    'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\AllocatePhoneNumbersAttachedToCIs' => $baseDir . '/src/Hook/AllocatePhoneNumbersAttachedToCIs.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\PhoneNumberMgmtOtherActions' => $baseDir . '/src/Hook/PhoneNumberMgmtOtherActions.php',
+    'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersFromObsoleteCIs' => $baseDir . '/src/Hook/ReleasePhoneNumbersFromObsoleteCIs.php',
+    'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersWithNoCI' => $baseDir . '/src/Hook/ReleasePhoneNumbersWithNoCI.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNExtension' => $baseDir . '/src/Model/_TipPNExtension.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNRange' => $baseDir . '/src/Model/_TipPNRange.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPhoneNumber' => $baseDir . '/src/Model/_TipPhoneNumber.php',

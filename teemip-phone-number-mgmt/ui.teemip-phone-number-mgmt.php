@@ -91,6 +91,94 @@ try {
 
 		///////////////////////////////////////////////////////////////////////////////////////////
 
+		case 'allocatenumber':    // Allocate existing phone number (not already allocated) to an existing CI
+			$sClass = utils::ReadParam('class', '', false, 'class');
+			$id = utils::ReadParam('id', '');
+			// Check if right parameters have been given
+			if (empty($sClass) || empty($id)) {
+				throw new ApplicationException(Dict::Format('UI:Error:2ParametersMissing', 'class', 'id'));
+			}
+			if ($sClass != 'TipPhoneNumber') {
+				throw new ApplicationException(Dict::Format('UI:Error:WrongActionForClass', $operation, $sClass));
+			}
+
+			// Check if the object exists
+			$oObj = MetaModel::GetObject($sClass, $id, false /* MustBeFound */);
+			if (is_null($oObj)) {
+				$oP->set_title(Dict::S('UI:ErrorPageTitle'));
+				$oP->P(Dict::S('UI:ObjectDoesNotExist'));
+			} else {
+				// The object can be read - Check now that user is allowed to modify it
+				$oSet = CMDBObjectSet::FromObject($oObj);
+				if (UserRights::IsActionAllowed($sClass, UR_ACTION_MODIFY, $oSet) == UR_ALLOWED_NO) {
+					throw new SecurityException('User not allowed to modify this object', array('class' => $sClass, 'id' => $id));
+				}
+
+				if ($oObj->Get('status') == 'allocated') {
+					DisplayMessage::Warning($oP, Dict::S('UI:PNManagement:Action:Allocate:TipPhoneNumber:NumberAlreadyAllocated'));
+					IPUtils::DisplayDetails($oP, $oObj);
+				} else {
+					$oObj->DisplayAllocateForm($oP, $oAppContext);
+				}
+			}
+			break; // End case allocatenumber
+
+		///////////////////////////////////////////////////////////////////////////////////////////
+
+		case 'doallocatenumber':    // Apply allocation of phone number to a CI
+			$sClass = utils::ReadPostedParam('class', '', 'class');
+			$id = utils::ReadPostedParam('id', '');
+			$sTransactionId = utils::ReadPostedParam('transaction_id', '', 'transaction_id');
+
+			// Check if right parameters have been given
+			if (empty($sClass) || empty($id)) {
+				throw new ApplicationException(Dict::Format('UI:Error:2ParametersMissing', 'class', 'id'));
+			}
+			if ($sClass != 'TipPhoneNumber') {
+				throw new ApplicationException(Dict::Format('UI:Error:WrongActionForClass', $operation, $sClass));
+			}
+
+			// Object does exist. It has already been checked in action allocatenumber but check anyway.
+			$oObj = MetaModel::GetObject($sClass, $id, true /* MustBeFound */);
+			$oSet = CMDBObjectSet::FromObject($oObj);
+			if (UserRights::IsActionAllowed($sClass, UR_ACTION_MODIFY, $oSet) == UR_ALLOWED_NO) {
+				throw new SecurityException('User not allowed to modify this object', array('class' => $sClass, 'id' => $id));
+			}
+
+			// Make sure we don't follow the same path twice in a row.
+			$sClassLabel = MetaModel::GetName($sClass);
+			if (!utils::IsTransactionValid($sTransactionId, false)) {
+				$oP->set_title(Dict::Format('UI:ModificationPageTitle_Object_Class', $oObj->GetName(), $sClassLabel));
+				$oP->p("<strong>".Dict::S('UI:Error:ObjectAlreadyUpdated')."</strong>\n");
+			} else {
+				$aPostedParam = [
+					'ciclass' => utils::ReadPostedParam('attr_ciclass', '', 'class'),
+					'ci_id' => utils::ReadPostedParam('attr_ci_id', 0, 'integer'),
+					'pnattribute' => utils::ReadPostedParam('attr_pnattribute', '', 'field_name'),
+				];
+
+				// Make sure number can be allocated
+				$sErrorString = $oObj->DoCheckToAllocate($aPostedParam);
+				if ($sErrorString != '') {
+					// Found issues, explain and give the user another chance
+					$sMessage = Dict::Format('UI:PNManagement:Action:Allocate:TipPhoneNumber:CannotBeAllocated', $sErrorString);
+					DisplayMessage::Warning($oP, $sMessage);
+					$oObj->DisplayAllocateForm($oP, $oAppContext, $aPostedParam);
+				} else {
+					// Allocate number
+					$oObj->DoAllocate($aPostedParam);
+
+					// Display result
+					$oP->set_title(Dict::Format('UI:PNManagement:Action:Allocate:TipPhoneNumber:PageTitle_Object_Class', $oObj->GetName(), $sClassLabel));
+					$sMessage = Dict::Format('UI:PNManagement:Action:Allocate:TipPhoneNumber:Done', $sClassLabel, $oObj->GetName());
+					DisplayMessage::Success($oP, $sMessage);
+					IPUtils::DisplayDetails($oP, $oObj);
+				}
+			}
+			break; // End case doallocatenumber
+
+		///////////////////////////////////////////////////////////////////////////////////////////
+
 		case 'unallocatenumber':    // Unallocate allocated phone number from all CIs
 			$sClass = utils::ReadParam('class', '', false, 'class');
 			$id = utils::ReadParam('id', '');

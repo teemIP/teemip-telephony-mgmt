@@ -250,6 +250,22 @@ Dict::Add('EN US', 'English', 'English', array(
     'UI:PNManagement:Action:DisplayPrevious:TipPhoneNumber' => 'Previous',
     'UI:PNManagement:Action:DisplayNext:TipPhoneNumber' => 'Next',
 
+    // Allocate PhoneNumbers to CIs
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber' => 'Allocate number to CI',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:PageTitle_Object_Class' => 'Allocate phone number',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:Done' => '%1$s %2$s has been allocated.',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:Class' => 'Target class',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:CI' => 'Functional CI',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:PNAttribute' => 'Phone number attribute',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:NoCI' => 'There are no instantiated CIs with phone number attributes in this organization!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:CannotBeAllocated' => 'Number cannot be allocated: %1$s',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:NumberAlreadyAllocated' => 'Number is already allocated!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:WrongAttribute' => 'Selected attribute is not a phone number attribute of the selected class!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:CIDoesNotExist' => 'Functional CI does not exist in the organization of the number!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:CINotModifiable' => 'You are not allowed to modify CI %1$s!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:AttributeIsReadOnly' => 'Phone number attribute of CI %1$s is read only!',
+    'UI:PNManagement:Action:Allocate:TipPhoneNumber:AttributeIsSynchronized' => 'Phone number attribute of CI %1$s is slave of a synchronization!',
+
     // Un-allocate PhoneNumbers from CIs
     'UI:PNManagement:Action:UnAllocate:TipPhoneNumber' => 'Un-allocate number from all CIs',
     'UI:PNManagement:Action:UnAllocate:TipPhoneNumber:PageTitle_Object_Class' => 'Un-allocate phone number',

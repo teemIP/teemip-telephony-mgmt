@@ -26,6 +26,9 @@ SetupWebPage::AddModule(
         'datamodel' => array(
             'vendor/autoload.php',
             'src/Hook/PhoneNumberMgmtOtherActions.php',
+            'src/Hook/AllocatePhoneNumbersAttachedToCIs.php',
+            'src/Hook/ReleasePhoneNumbersWithNoCI.php',
+            'src/Hook/ReleasePhoneNumbersFromObsoleteCIs.php',
             'model.teemip-phone-number-mgmt.php',
         ),
         'data.struct' => array(
@@ -41,7 +44,26 @@ SetupWebPage::AddModule(
 
         // Default settings
         //
-        'settings' => array(),
+        'settings' => array(
+            'pn_allocate_on_ci_status' => array(
+                'enabled' => false,
+                'debug' => false,
+                'periodicity' => 3600,
+                'status_list' => array('implementation', 'production'),
+            ),
+            'pn_release_on_ci_status' => array(
+                'enabled' => false,
+                'debug' => false,
+                'periodicity' => 3600,
+                'status_list' => array('obsolete'),
+            ),
+            'pn_release_on_no_ci' => array(
+                'enabled' => false,
+                'debug' => false,
+                'periodicity' => 3600,
+                'target_status' => 'released',
+            ),
+        ),
     )
 );
 

@@ -122,15 +122,20 @@ class PhoneNumberMgmtOtherActions implements iPopupMenuExtension
                         }
                     }
 
-                    // Un-allocate number from all CIs
-                    if (($oObj->Get('status') == 'allocated') && (UserRights::IsActionAllowed('TipPhoneNumber', UR_ACTION_MODIFY) == UR_ALLOWED_YES)) {
+                    // Allocate number to a CI or un-allocate it from all CIs, depending on its status
+                    if (UserRights::IsActionAllowed('TipPhoneNumber', UR_ACTION_MODIFY) == UR_ALLOWED_YES) {
                         $oAppContext = new ApplicationContext();
                         $aParams = $oAppContext->GetAsHash();
-                        $aParams['operation'] = 'unallocatenumber';
                         $aParams['class'] = 'TipPhoneNumber';
                         $aParams['id'] = $oObj->GetKey();
+                        if ($oObj->Get('status') == 'allocated') {
+                            $aParams['operation'] = 'unallocatenumber';
+                            $sMenu = 'UI:PNManagement:Action:UnAllocate:TipPhoneNumber';
+                        } else {
+                            $aParams['operation'] = 'allocatenumber';
+                            $sMenu = 'UI:PNManagement:Action:Allocate:TipPhoneNumber';
+                        }
                         $aResult[] = new SeparatorPopupMenuItem();
-                        $sMenu = 'UI:PNManagement:Action:UnAllocate:TipPhoneNumber';
                         $aResult[] = new URLPopupMenuItem($sMenu, Dict::S($sMenu), utils::GetAbsoluteUrlModulePage(static::MODULE_CODE, 'ui.teemip-phone-number-mgmt.php', $aParams));
                     }
                 }
