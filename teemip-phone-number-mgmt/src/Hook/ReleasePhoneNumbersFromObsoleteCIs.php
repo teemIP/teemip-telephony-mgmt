@@ -120,6 +120,12 @@ class ReleasePhoneNumbersFromObsoleteCIs implements iScheduledProcess
 			return 'Process being disabled for the time being, execution has not run.';
 		}
 
+		// Don't run if CI statuses are shared with the allocation task, as numbers would be allocated and released at each run
+		$aConflictingStatus = PhoneNumberUtils::GetStatusConflictsBetweenAllocationAndRelease();
+		if (!empty($aConflictingStatus)) {
+			return 'Status lists of pn_allocate_on_ci_status and pn_release_on_ci_status share the following status: '.implode(', ', $aConflictingStatus).'. Execution has not run.';
+		}
+
 		// Keep only valid status codes, as they are inserted in OQL queries
 		$aValidStatusList = array_filter($aStatusList, function ($sStatus) {
 			return is_string($sStatus) && (preg_match('/^[A-Za-z0-9_]+$/', $sStatus) === 1);

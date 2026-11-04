@@ -8,6 +8,8 @@ namespace TeemIp\TeemIp\Extension\PhoneNumberManagement\Helper;
 
 use MetaModel;
 use SetupUtils;
+use TeemIp\TeemIp\Extension\PhoneNumberManagement\Hook\AllocatePhoneNumbersAttachedToCIs;
+use TeemIp\TeemIp\Extension\PhoneNumberManagement\Hook\ReleasePhoneNumbersFromObsoleteCIs;
 use utils;
 
 /**
@@ -79,6 +81,32 @@ class PhoneNumberUtils
     public static function IsSameLength(string $sNumber1, string $sNumber2): bool
     {
         return (strlen($sNumber1) == strlen($sNumber2));
+    }
+
+    /**
+     * Get the CI statuses shared by the background tasks that allocate and release phone numbers according to the status of CIs.
+     * When both tasks are enabled, such statuses would make numbers be allocated and released alternately at each run.
+     * An empty status list for the allocation task means that the status of CIs is not considered, hence conflicts with any status.
+     *
+     * @return array conflicting statuses, empty if there is none or if one of the tasks is disabled
+     */
+    public static function GetStatusConflictsBetweenAllocationAndRelease(): array
+    {
+        $aAllocateSettings = MetaModel::GetModuleSetting(AllocatePhoneNumbersAttachedToCIs::MODULE_CODE, AllocatePhoneNumbersAttachedToCIs::FUNCTION_CODE, []);
+        $aReleaseSettings = MetaModel::GetModuleSetting(ReleasePhoneNumbersFromObsoleteCIs::MODULE_CODE, ReleasePhoneNumbersFromObsoleteCIs::FUNCTION_CODE, []);
+        $bAllocateEnabled = (bool)($aAllocateSettings[AllocatePhoneNumbersAttachedToCIs::FUNCTION_SETTING_ENABLED] ?? AllocatePhoneNumbersAttachedToCIs::DEFAULT_FUNCTION_SETTING_ENABLED);
+        $bReleaseEnabled = (bool)($aReleaseSettings[ReleasePhoneNumbersFromObsoleteCIs::FUNCTION_SETTING_ENABLED] ?? ReleasePhoneNumbersFromObsoleteCIs::DEFAULT_FUNCTION_SETTING_ENABLED);
+        if (!$bAllocateEnabled || !$bReleaseEnabled) {
+            return [];
+        }
+
+        $aAllocateStatusList = (array)($aAllocateSettings[AllocatePhoneNumbersAttachedToCIs::FUNCTION_SETTING_STATUS_LIST] ?? AllocatePhoneNumbersAttachedToCIs::DEFAULT_FUNCTION_SETTING_STATUS_LIST);
+        $aReleaseStatusList = (array)($aReleaseSettings[ReleasePhoneNumbersFromObsoleteCIs::FUNCTION_SETTING_STATUS_LIST] ?? ReleasePhoneNumbersFromObsoleteCIs::DEFAULT_FUNCTION_SETTING_STATUS_LIST);
+        if (empty($aAllocateStatusList)) {
+            return array_values($aReleaseStatusList);
+        }
+
+        return array_values(array_intersect($aAllocateStatusList, $aReleaseStatusList));
     }
 
     /**
