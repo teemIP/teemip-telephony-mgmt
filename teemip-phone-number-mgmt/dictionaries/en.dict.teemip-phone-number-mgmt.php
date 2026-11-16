@@ -41,8 +41,8 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:TipPNObject/Attribute:contacts_list+' => 'Contacts attached to the PN object',
     'Class:TipPNObject/Attribute:documents_list' => 'Documents',
     'Class:TipPNObject/Attribute:documents_list+' => 'Documents attached to the PN object',
-    'Class:TipPNObject/Attribute:tickets_list' => 'Documents',
-    'Class:TipPNObject/Attribute:tickets_list+' => 'Documents attached to the PN object',
+    'Class:TipPNObject/Attribute:tickets_list' => 'Tickets',
+    'Class:TipPNObject/Attribute:tickets_list+' => 'Tickets attached to the PN object',
 ));
 
 //
