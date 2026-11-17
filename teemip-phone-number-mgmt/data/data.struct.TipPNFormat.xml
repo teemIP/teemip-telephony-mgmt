@@ -1,0 +1,1818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Set>
+	<TipPNFormat alias="TipPNFormat" id="1">
+		<name>France</name>
+		<tippncountrycode_id>75</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern># ## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="2">
+		<name>Belgium - Mobile</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>9</length>
+		<pattern>### ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="3">
+		<name>Belgium - Brussels</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="4">
+		<name>Belgium - Antwerp</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="5">
+		<name>Belgium - Liège</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="6">
+		<name>Belgium - Ghent</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits>9</leading_digits>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="7">
+		<name>Belgium - Other zones</name>
+		<tippncountrycode_id>21</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="8">
+		<name>Switzerland</name>
+		<tippncountrycode_id>213</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="9">
+		<name>Spain</name>
+		<tippncountrycode_id>207</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="10">
+		<name>United Kingdom - Default</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="11">
+		<name>United Kingdom - 2-digit area codes</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="12">
+		<name>United Kingdom - Non-geographic 3xx</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="13">
+		<name>United Kingdom - Special rate 8xx</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="14">
+		<name>United Kingdom - Premium rate 9xx</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>9</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="15">
+		<name>United Kingdom - Leeds</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>113</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="16">
+		<name>United Kingdom - Sheffield</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>114</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="17">
+		<name>United Kingdom - Nottingham</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>115</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="18">
+		<name>United Kingdom - Leicester</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>116</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="19">
+		<name>United Kingdom - Bristol</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>117</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="20">
+		<name>United Kingdom - Reading</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>118</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="21">
+		<name>United Kingdom - Birmingham</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>121</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="22">
+		<name>United Kingdom - Edinburgh</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>131</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="23">
+		<name>United Kingdom - Glasgow</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>141</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="24">
+		<name>United Kingdom - Liverpool</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>151</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="25">
+		<name>United Kingdom - Manchester</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>161</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="26">
+		<name>United Kingdom - Tyneside</name>
+		<tippncountrycode_id>232</tippncountrycode_id>
+		<leading_digits>191</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="27">
+		<name>United States of America</name>
+		<tippncountrycode_id>233</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="28">
+		<name>Canada</name>
+		<tippncountrycode_id>39</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<!-- Formats below are derived from the metadata of libphonenumber (https://github.com/google/libphonenumber, Apache License 2.0) -->
+	<!-- Only the main cases of each country are kept: other numbers are displayed with the default format of their length -->
+	<TipPNFormat alias="TipPNFormat" id="29">
+		<name>Albania - 8 digits</name>
+		<tippncountrycode_id>2</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="30">
+		<name>Albania - 8 digits - starting with 4</name>
+		<tippncountrycode_id>2</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="31">
+		<name>Albania - 9 digits</name>
+		<tippncountrycode_id>2</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="32">
+		<name>Andorra</name>
+		<tippncountrycode_id>5</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="33">
+		<name>Austria - 5 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>5</length>
+		<pattern># ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="34">
+		<name>Austria - 6 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern># #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="35">
+		<name>Austria - 7 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>#### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="36">
+		<name>Austria - 7 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>7</length>
+		<pattern>### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="37">
+		<name>Austria - 8 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>#### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="38">
+		<name>Austria - 8 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="39">
+		<name>Austria - 9 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="40">
+		<name>Austria - 9 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>9</length>
+		<pattern>### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="41">
+		<name>Austria - 10 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="42">
+		<name>Austria - 10 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>10</length>
+		<pattern>### #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="43">
+		<name>Austria - 11 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>#### #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="44">
+		<name>Austria - 11 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>11</length>
+		<pattern>### ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="45">
+		<name>Austria - 12 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>#### ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="46">
+		<name>Austria - 12 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>12</length>
+		<pattern>### #########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="47">
+		<name>Austria - 13 digits</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits/>
+		<length>13</length>
+		<pattern>#### #########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="48">
+		<name>Austria - 13 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>14</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>13</length>
+		<pattern>### ##########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="49">
+		<name>Belarus - 9 digits</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="50">
+		<name>Belarus - 9 digits - starting with 1</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>9</length>
+		<pattern>### ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="51">
+		<name>Belarus - 9 digits - starting with 15</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>15</leading_digits>
+		<length>9</length>
+		<pattern>#### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="52">
+		<name>Belarus - 9 digits - starting with 17</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>17</leading_digits>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="53">
+		<name>Belarus - 9 digits - starting with 21</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>21</leading_digits>
+		<length>9</length>
+		<pattern>### ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="54">
+		<name>Belarus - 9 digits - starting with 22</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>22</leading_digits>
+		<length>9</length>
+		<pattern>#### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="55">
+		<name>Belarus - 9 digits - starting with 23</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits>23</leading_digits>
+		<length>9</length>
+		<pattern>#### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="56">
+		<name>Belarus - 10 digits</name>
+		<tippncountrycode_id>20</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="57">
+		<name>Bosnia and Herzegovina - 8 digits</name>
+		<tippncountrycode_id>28</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="58">
+		<name>Bosnia and Herzegovina - 9 digits</name>
+		<tippncountrycode_id>28</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ## ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="59">
+		<name>Bulgaria - 6 digits</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern># # ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="60">
+		<name>Bulgaria - 7 digits</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="61">
+		<name>Bulgaria - 7 digits - starting with 2</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>7</length>
+		<pattern># ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="62">
+		<name>Bulgaria - 8 digits</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="63">
+		<name>Bulgaria - 8 digits - starting with 2</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="64">
+		<name>Bulgaria - 8 digits - starting with 43</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits>43</leading_digits>
+		<length>8</length>
+		<pattern>### ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="65">
+		<name>Bulgaria - 9 digits</name>
+		<tippncountrycode_id>33</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="66">
+		<name>Croatia - 8 digits</name>
+		<tippncountrycode_id>53</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="67">
+		<name>Croatia - 8 digits - starting with 1</name>
+		<tippncountrycode_id>53</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>8</length>
+		<pattern># #### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="68">
+		<name>Croatia - 9 digits</name>
+		<tippncountrycode_id>53</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="69">
+		<name>Cyprus</name>
+		<tippncountrycode_id>56</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="70">
+		<name>Czechia - 9 digits</name>
+		<tippncountrycode_id>57</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="71">
+		<name>Czechia - 11 digits</name>
+		<tippncountrycode_id>57</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>## ### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="72">
+		<name>Denmark</name>
+		<tippncountrycode_id>59</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="73">
+		<name>Estonia - 7 digits</name>
+		<tippncountrycode_id>68</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="74">
+		<name>Estonia - 8 digits</name>
+		<tippncountrycode_id>68</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>#### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="75">
+		<name>Faroe Islands</name>
+		<tippncountrycode_id>72</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="76">
+		<name>Finland - 5 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>5</length>
+		<pattern># ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="77">
+		<name>Finland - 6 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern># #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="78">
+		<name>Finland - 6 digits - starting with 4 (mobile)</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>6</length>
+		<pattern>## ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="79">
+		<name>Finland - 7 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern># ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="80">
+		<name>Finland - 7 digits - starting with 4 (mobile)</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>7</length>
+		<pattern>## #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="81">
+		<name>Finland - 8 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern># #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="82">
+		<name>Finland - 8 digits - starting with 4 (mobile)</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="83">
+		<name>Finland - 9 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern># ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="84">
+		<name>Finland - 9 digits - starting with 4 (mobile)</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>9</length>
+		<pattern>## #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="85">
+		<name>Finland - 10 digits</name>
+		<tippncountrycode_id>74</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="86">
+		<name>Germany - 6 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>#### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="87">
+		<name>Germany - 7 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>#### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="88">
+		<name>Germany - 8 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>#### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="89">
+		<name>Germany - 9 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="90">
+		<name>Germany - 10 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="91">
+		<name>Germany - 10 digits - starting with 1 (mobile)</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>10</length>
+		<pattern>### #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="92">
+		<name>Germany - 11 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>#### #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="93">
+		<name>Germany - 11 digits - starting with 1</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>11</length>
+		<pattern>### ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="94">
+		<name>Germany - 11 digits - starting with 15 (mobile)</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits>15</leading_digits>
+		<length>11</length>
+		<pattern>#### #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="95">
+		<name>Germany - 12 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>#### ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="96">
+		<name>Germany - 13 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>13</length>
+		<pattern>#### #########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="97">
+		<name>Germany - 14 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>14</length>
+		<pattern>#### ##########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="98">
+		<name>Germany - 15 digits</name>
+		<tippncountrycode_id>81</tippncountrycode_id>
+		<leading_digits/>
+		<length>15</length>
+		<pattern>#### ###########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="99">
+		<name>Gibraltar - 8 digits</name>
+		<tippncountrycode_id>83</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="100">
+		<name>Gibraltar - 8 digits - starting with 2</name>
+		<tippncountrycode_id>83</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="101">
+		<name>Greece - 10 digits</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="102">
+		<name>Greece - 10 digits - starting with 21</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits>21</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="103">
+		<name>Greece - 10 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="104">
+		<name>Greece - 10 digits - starting with 7</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits>7</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="105">
+		<name>Greece - 10 digits - starting with 8</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="106">
+		<name>Greece - 10 digits - starting with 9 (mobile)</name>
+		<tippncountrycode_id>84</tippncountrycode_id>
+		<leading_digits>9</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="107">
+		<name>Guernsey - 10 digits</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="108">
+		<name>Guernsey - 10 digits - starting with 5</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits>5</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="109">
+		<name>Guernsey - 10 digits - starting with 7</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits>7</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="110">
+		<name>Guernsey - 10 digits - starting with 77 (mobile)</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits>77</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="111">
+		<name>Guernsey - 10 digits - starting with 78 (mobile)</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits>78</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="112">
+		<name>Guernsey - 10 digits - starting with 79 (mobile)</name>
+		<tippncountrycode_id>90</tippncountrycode_id>
+		<leading_digits>79</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="113">
+		<name>Holy See - 9 digits</name>
+		<tippncountrycode_id>95</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="114">
+		<name>Holy See - 10 digits</name>
+		<tippncountrycode_id>95</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="115">
+		<name>Holy See - 10 digits - starting with 5</name>
+		<tippncountrycode_id>95</tippncountrycode_id>
+		<leading_digits>5</leading_digits>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="116">
+		<name>Holy See - 11 digits</name>
+		<tippncountrycode_id>95</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>### #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="117">
+		<name>Holy See - 12 digits</name>
+		<tippncountrycode_id>95</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>### #### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="118">
+		<name>Hungary - 8 digits</name>
+		<tippncountrycode_id>98</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="119">
+		<name>Hungary - 8 digits - starting with 1</name>
+		<tippncountrycode_id>98</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="120">
+		<name>Hungary - 9 digits</name>
+		<tippncountrycode_id>98</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="121">
+		<name>Iceland</name>
+		<tippncountrycode_id>99</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="122">
+		<name>Ireland - 7 digits</name>
+		<tippncountrycode_id>104</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="123">
+		<name>Ireland - 8 digits</name>
+		<tippncountrycode_id>104</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="124">
+		<name>Ireland - 9 digits</name>
+		<tippncountrycode_id>104</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="125">
+		<name>Ireland - 9 digits - starting with 1</name>
+		<tippncountrycode_id>104</tippncountrycode_id>
+		<leading_digits>1</leading_digits>
+		<length>9</length>
+		<pattern># #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="126">
+		<name>Ireland - 10 digits</name>
+		<tippncountrycode_id>104</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## # ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="127">
+		<name>Isle of Man - 10 digits</name>
+		<tippncountrycode_id>105</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="128">
+		<name>Isle of Man - 10 digits - starting with 3</name>
+		<tippncountrycode_id>105</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="129">
+		<name>Isle of Man - 10 digits - starting with 75 (mobile)</name>
+		<tippncountrycode_id>105</tippncountrycode_id>
+		<leading_digits>75</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="130">
+		<name>Isle of Man - 10 digits - starting with 76 (mobile)</name>
+		<tippncountrycode_id>105</tippncountrycode_id>
+		<leading_digits>76</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="131">
+		<name>Isle of Man - 10 digits - starting with 79 (mobile)</name>
+		<tippncountrycode_id>105</tippncountrycode_id>
+		<leading_digits>79</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="132">
+		<name>Italy - 6 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>#### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="133">
+		<name>Italy - 7 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>#### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="134">
+		<name>Italy - 8 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>#### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="135">
+		<name>Italy - 9 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="136">
+		<name>Italy - 9 digits - starting with 0</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits>0</leading_digits>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="137">
+		<name>Italy - 10 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="138">
+		<name>Italy - 10 digits - starting with 0</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits>0</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="139">
+		<name>Italy - 11 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>### #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="140">
+		<name>Italy - 11 digits - starting with 0</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits>0</leading_digits>
+		<length>11</length>
+		<pattern>#### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="141">
+		<name>Italy - 12 digits</name>
+		<tippncountrycode_id>107</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>### #### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="142">
+		<name>Jersey - 10 digits</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## #### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="143">
+		<name>Jersey - 10 digits - starting with 3</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>10</length>
+		<pattern>### ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="144">
+		<name>Jersey - 10 digits - starting with 75 (mobile)</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits>75</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="145">
+		<name>Jersey - 10 digits - starting with 77 (mobile)</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits>77</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="146">
+		<name>Jersey - 10 digits - starting with 78 (mobile)</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits>78</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="147">
+		<name>Jersey - 10 digits - starting with 79 (mobile)</name>
+		<tippncountrycode_id>110</tippncountrycode_id>
+		<leading_digits>79</leading_digits>
+		<length>10</length>
+		<pattern>#### ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="148">
+		<name>Kosovo - 8 digits</name>
+		<tippncountrycode_id>117</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="149">
+		<name>Kosovo - 9 digits</name>
+		<tippncountrycode_id>117</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="150">
+		<name>Kosovo - 10 digits</name>
+		<tippncountrycode_id>117</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="151">
+		<name>Kosovo - 11 digits</name>
+		<tippncountrycode_id>117</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>## #########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="152">
+		<name>Kosovo - 12 digits</name>
+		<tippncountrycode_id>117</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>## ##########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="153">
+		<name>Latvia</name>
+		<tippncountrycode_id>121</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="154">
+		<name>Liechtenstein - 7 digits</name>
+		<tippncountrycode_id>126</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="155">
+		<name>Liechtenstein - 9 digits</name>
+		<tippncountrycode_id>126</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="156">
+		<name>Lithuania - 8 digits</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="157">
+		<name>Lithuania - 8 digits - starting with 37</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>37</leading_digits>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="158">
+		<name>Lithuania - 8 digits - starting with 4</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="159">
+		<name>Lithuania - 8 digits - starting with 42</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>42</leading_digits>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="160">
+		<name>Lithuania - 8 digits - starting with 44</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>44</leading_digits>
+		<length>8</length>
+		<pattern>### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="161">
+		<name>Lithuania - 8 digits - starting with 5</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>5</leading_digits>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="162">
+		<name>Lithuania - 8 digits - starting with 9</name>
+		<tippncountrycode_id>127</tippncountrycode_id>
+		<leading_digits>9</leading_digits>
+		<length>8</length>
+		<pattern>### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="163">
+		<name>Luxembourg - 4 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>4</length>
+		<pattern>####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="164">
+		<name>Luxembourg - 5 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>5</length>
+		<pattern>## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="165">
+		<name>Luxembourg - 6 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="166">
+		<name>Luxembourg - 7 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## ## ## #</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="167">
+		<name>Luxembourg - 8 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="168">
+		<name>Luxembourg - 9 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ## ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="169">
+		<name>Luxembourg - 9 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="170">
+		<name>Luxembourg - 10 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## ## ## ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="171">
+		<name>Luxembourg - 11 digits</name>
+		<tippncountrycode_id>128</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>## ## ## #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="172">
+		<name>Malta</name>
+		<tippncountrycode_id>135</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>#### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="173">
+		<name>Moldova - 8 digits</name>
+		<tippncountrycode_id>143</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="174">
+		<name>Moldova - 8 digits - starting with 22</name>
+		<tippncountrycode_id>143</tippncountrycode_id>
+		<leading_digits>22</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="175">
+		<name>Moldova - 8 digits - starting with 3</name>
+		<tippncountrycode_id>143</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="176">
+		<name>Monaco - 8 digits</name>
+		<tippncountrycode_id>144</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="177">
+		<name>Monaco - 8 digits - starting with 4 (mobile)</name>
+		<tippncountrycode_id>144</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="178">
+		<name>Monaco - 9 digits</name>
+		<tippncountrycode_id>144</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern># ## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="179">
+		<name>Montenegro</name>
+		<tippncountrycode_id>146</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="180">
+		<name>Netherlands - 9 digits</name>
+		<tippncountrycode_id>154</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="181">
+		<name>Netherlands - 9 digits - starting with 5</name>
+		<tippncountrycode_id>154</tippncountrycode_id>
+		<leading_digits>5</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="182">
+		<name>Netherlands - 9 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>154</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>9</length>
+		<pattern># ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="183">
+		<name>North Macedonia - 8 digits</name>
+		<tippncountrycode_id>162</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>### # ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="184">
+		<name>North Macedonia - 8 digits - starting with 2</name>
+		<tippncountrycode_id>162</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>8</length>
+		<pattern># ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="185">
+		<name>North Macedonia - 8 digits - starting with 3</name>
+		<tippncountrycode_id>162</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="186">
+		<name>North Macedonia - 8 digits - starting with 4</name>
+		<tippncountrycode_id>162</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="187">
+		<name>North Macedonia - 8 digits - starting with 7 (mobile)</name>
+		<tippncountrycode_id>162</tippncountrycode_id>
+		<leading_digits>7</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="188">
+		<name>Norway - 5 digits</name>
+		<tippncountrycode_id>164</tippncountrycode_id>
+		<leading_digits/>
+		<length>5</length>
+		<pattern>#####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="189">
+		<name>Norway - 8 digits</name>
+		<tippncountrycode_id>164</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="190">
+		<name>Poland - 7 digits</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="191">
+		<name>Poland - 9 digits</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="192">
+		<name>Poland - 9 digits - starting with 45 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>45</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="193">
+		<name>Poland - 9 digits - starting with 50 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>50</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="194">
+		<name>Poland - 9 digits - starting with 51 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>51</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="195">
+		<name>Poland - 9 digits - starting with 53 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>53</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="196">
+		<name>Poland - 9 digits - starting with 57 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>57</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="197">
+		<name>Poland - 9 digits - starting with 60 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>60</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="198">
+		<name>Poland - 9 digits - starting with 66 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>66</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="199">
+		<name>Poland - 9 digits - starting with 69 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>69</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="200">
+		<name>Poland - 9 digits - starting with 72 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>72</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="201">
+		<name>Poland - 9 digits - starting with 73 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>73</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="202">
+		<name>Poland - 9 digits - starting with 78 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>78</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="203">
+		<name>Poland - 9 digits - starting with 79 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>79</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="204">
+		<name>Poland - 9 digits - starting with 88 (mobile)</name>
+		<tippncountrycode_id>175</tippncountrycode_id>
+		<leading_digits>88</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="205">
+		<name>Portugal - 9 digits</name>
+		<tippncountrycode_id>176</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="206">
+		<name>Portugal - 9 digits - starting with 21</name>
+		<tippncountrycode_id>176</tippncountrycode_id>
+		<leading_digits>21</leading_digits>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="207">
+		<name>Portugal - 9 digits - starting with 22</name>
+		<tippncountrycode_id>176</tippncountrycode_id>
+		<leading_digits>22</leading_digits>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="208">
+		<name>Romania - 6 digits</name>
+		<tippncountrycode_id>179</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="209">
+		<name>Romania - 6 digits - starting with 3</name>
+		<tippncountrycode_id>179</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>6</length>
+		<pattern>## ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="210">
+		<name>Romania - 9 digits</name>
+		<tippncountrycode_id>179</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="211">
+		<name>Romania - 9 digits - starting with 21</name>
+		<tippncountrycode_id>179</tippncountrycode_id>
+		<leading_digits>21</leading_digits>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="212">
+		<name>Romania - 9 digits - starting with 31</name>
+		<tippncountrycode_id>179</tippncountrycode_id>
+		<leading_digits>31</leading_digits>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="213">
+		<name>Russian Federation</name>
+		<tippncountrycode_id>180</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>### ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="214">
+		<name>San Marino</name>
+		<tippncountrycode_id>191</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="215">
+		<name>Serbia - 7 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="216">
+		<name>Serbia - 8 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="217">
+		<name>Serbia - 9 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="218">
+		<name>Serbia - 10 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="219">
+		<name>Serbia - 11 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>11</length>
+		<pattern>## #########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="220">
+		<name>Serbia - 12 digits</name>
+		<tippncountrycode_id>195</tippncountrycode_id>
+		<leading_digits/>
+		<length>12</length>
+		<pattern>## ##########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="221">
+		<name>Slovakia - 6 digits</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="222">
+		<name>Slovakia - 7 digits</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="223">
+		<name>Slovakia - 9 digits</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="224">
+		<name>Slovakia - 9 digits - starting with 2</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits>2</leading_digits>
+		<length>9</length>
+		<pattern># ### ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="225">
+		<name>Slovakia - 9 digits - starting with 8</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="226">
+		<name>Slovakia - 9 digits - starting with 9 (mobile)</name>
+		<tippncountrycode_id>200</tippncountrycode_id>
+		<leading_digits>9</leading_digits>
+		<length>9</length>
+		<pattern>### ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="227">
+		<name>Slovenia - 8 digits</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="228">
+		<name>Slovenia - 8 digits - starting with 30 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>30</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="229">
+		<name>Slovenia - 8 digits - starting with 31 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>31</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="230">
+		<name>Slovenia - 8 digits - starting with 40 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>40</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="231">
+		<name>Slovenia - 8 digits - starting with 41 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>41</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="232">
+		<name>Slovenia - 8 digits - starting with 43 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>43</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="233">
+		<name>Slovenia - 8 digits - starting with 51 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>51</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="234">
+		<name>Slovenia - 8 digits - starting with 6 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>6</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="235">
+		<name>Slovenia - 8 digits - starting with 70 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>70</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="236">
+		<name>Slovenia - 8 digits - starting with 71 (mobile)</name>
+		<tippncountrycode_id>201</tippncountrycode_id>
+		<leading_digits>71</leading_digits>
+		<length>8</length>
+		<pattern>## ### ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="237">
+		<name>Svalbard and Jan Mayen - 5 digits</name>
+		<tippncountrycode_id>211</tippncountrycode_id>
+		<leading_digits/>
+		<length>5</length>
+		<pattern>#####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="238">
+		<name>Svalbard and Jan Mayen - 8 digits</name>
+		<tippncountrycode_id>211</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="239">
+		<name>Svalbard and Jan Mayen - 8 digits - starting with 8</name>
+		<tippncountrycode_id>211</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>8</length>
+		<pattern>### ## ###</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="240">
+		<name>Sweden - 7 digits</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="241">
+		<name>Sweden - 7 digits - starting with 8</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>7</length>
+		<pattern># ## ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="242">
+		<name>Sweden - 8 digits</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>### ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="243">
+		<name>Sweden - 8 digits - starting with 8</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>8</length>
+		<pattern># ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="244">
+		<name>Sweden - 9 digits</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ## ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="245">
+		<name>Sweden - 9 digits - starting with 8</name>
+		<tippncountrycode_id>212</tippncountrycode_id>
+		<leading_digits>8</leading_digits>
+		<length>9</length>
+		<pattern># ### ### ##</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="246">
+		<name>Ukraine - 9 digits</name>
+		<tippncountrycode_id>230</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## ### ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="247">
+		<name>Ukraine - 9 digits - starting with 3</name>
+		<tippncountrycode_id>230</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="248">
+		<name>Ukraine - 9 digits - starting with 4</name>
+		<tippncountrycode_id>230</tippncountrycode_id>
+		<leading_digits>4</leading_digits>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="249">
+		<name>Ukraine - 9 digits - starting with 5</name>
+		<tippncountrycode_id>230</tippncountrycode_id>
+		<leading_digits>5</leading_digits>
+		<length>9</length>
+		<pattern>#### #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="250">
+		<name>Åland Islands - 6 digits</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits/>
+		<length>6</length>
+		<pattern>## ####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="251">
+		<name>Åland Islands - 6 digits - starting with 3</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>6</length>
+		<pattern># #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="252">
+		<name>Åland Islands - 7 digits</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits/>
+		<length>7</length>
+		<pattern>## #####</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="253">
+		<name>Åland Islands - 7 digits - starting with 3</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>7</length>
+		<pattern># ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="254">
+		<name>Åland Islands - 8 digits</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits/>
+		<length>8</length>
+		<pattern>## ######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="255">
+		<name>Åland Islands - 8 digits - starting with 3</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>8</length>
+		<pattern># #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="256">
+		<name>Åland Islands - 9 digits</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits/>
+		<length>9</length>
+		<pattern>## #######</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="257">
+		<name>Åland Islands - 9 digits - starting with 3</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>9</length>
+		<pattern># ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="258">
+		<name>Åland Islands - 10 digits</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits/>
+		<length>10</length>
+		<pattern>## ########</pattern>
+	</TipPNFormat>
+	<TipPNFormat alias="TipPNFormat" id="259">
+		<name>Åland Islands - 10 digits - starting with 3</name>
+		<tippncountrycode_id>246</tippncountrycode_id>
+		<leading_digits>3</leading_digits>
+		<length>10</length>
+		<pattern># #########</pattern>
+	</TipPNFormat>
+</Set>

@@ -25,6 +25,7 @@ SetupWebPage::AddModule(
         //
         'datamodel' => array(
             'vendor/autoload.php',
+            'src/Model/AttributeE164PhoneNumber.php',
             'src/Hook/PhoneNumberMgmtOtherActions.php',
             'src/Hook/AllocatePhoneNumbersAttachedToCIs.php',
             'src/Hook/ReleasePhoneNumbersWithNoCI.php',
@@ -33,6 +34,7 @@ SetupWebPage::AddModule(
         ),
         'data.struct' => array(
             'data/data.struct.TipPNCountryCode.xml',
+            'data/data.struct.TipPNFormat.xml',
         ),
         'data.sample' => array(
         ),

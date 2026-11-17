@@ -28,6 +28,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersFromObsoleteCIs' => __DIR__ . '/../..' . '/src/Hook/ReleasePhoneNumbersFromObsoleteCIs.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersWithNoCI' => __DIR__ . '/../..' . '/src/Hook/ReleasePhoneNumbersWithNoCI.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNExtension' => __DIR__ . '/../..' . '/src/Model/_TipPNExtension.php',
+        'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNFormat' => __DIR__ . '/../..' . '/src/Model/_TipPNFormat.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNRange' => __DIR__ . '/../..' . '/src/Model/_TipPNRange.php',
         'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPhoneNumber' => __DIR__ . '/../..' . '/src/Model/_TipPhoneNumber.php',
     );

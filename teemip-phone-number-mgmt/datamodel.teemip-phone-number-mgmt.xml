@@ -543,6 +543,11 @@
                     <ext_key_to_me>tippncountrycode_id</ext_key_to_me>
                     <edit_mode>none</edit_mode>
                 </field>
+                <field id="tippnformats_list" xsi:type="AttributeLinkedSet">
+                    <linked_class>TipPNFormat</linked_class>
+                    <ext_key_to_me>tippncountrycode_id</ext_key_to_me>
+                    <edit_mode>in_place</edit_mode>
+                </field>
             </fields>
             <methods/>
             <presentation>
@@ -559,6 +564,9 @@
                         </item>
                         <item id="tippnranges_list">
                             <rank>40</rank>
+                        </item>
+                        <item id="tippnformats_list">
+                            <rank>50</rank>
                         </item>
                     </items>
                 </details>
@@ -595,6 +603,155 @@
                         </item>
                         <item id="calling_code">
                             <rank>20</rank>
+                        </item>
+                    </items>
+                </list>
+            </presentation>
+        </class>
+        <class id="TipPNFormat" _delta="define">
+            <parent>Typology</parent>
+            <php_parent>
+                <name>TeemIp\TeemIp\Extension\PhoneNumberManagement\Model\_TipPNFormat</name>
+                <file>src/Model/_TipPNFormat.php</file>
+            </php_parent>
+            <properties>
+                <comment/>
+                <category>bizmodel,searchable,pnmgmt</category>
+                <abstract>false</abstract>
+                <key_type>autoincrement</key_type>
+                <db_table>tippnformat</db_table>
+                <db_key_field>id</db_key_field>
+                <db_final_class_field/>
+                <naming>
+                    <attributes>
+                        <attribute id="name"/>
+                    </attributes>
+                </naming>
+                <reconciliation>
+                    <attributes>
+                        <attribute id="tippncountrycode_id"/>
+                        <attribute id="leading_digits"/>
+                        <attribute id="length"/>
+                    </attributes>
+                </reconciliation>
+                <uniqueness_rules>
+                    <rule id="no_duplicate_name">
+                        <attributes>
+                            <attribute id="name"/>
+                        </attributes>
+                        <filter/>
+                        <disabled>false</disabled>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                    <rule id="no_duplicate_format">
+                        <attributes>
+                            <attribute id="tippncountrycode_id"/>
+                            <attribute id="leading_digits"/>
+                            <attribute id="length"/>
+                        </attributes>
+                        <filter/>
+                        <disabled>false</disabled>
+                        <is_blocking>true</is_blocking>
+                    </rule>
+                </uniqueness_rules>
+            </properties>
+            <fields>
+                <field id="tippncountrycode_id" xsi:type="AttributeExternalKey">
+                    <sql>tippncountrycode_id</sql>
+                    <target_class>TipPNCountryCode</target_class>
+                    <is_null_allowed>false</is_null_allowed>
+                    <on_target_delete>DEL_AUTO</on_target_delete>
+                    <jointype/>
+                </field>
+                <field id="tippncountrycode_name" xsi:type="AttributeExternalField">
+                    <extkey_attcode>tippncountrycode_id</extkey_attcode>
+                    <target_attcode>name</target_attcode>
+                </field>
+                <field id="leading_digits" xsi:type="AttributeString">
+                    <sql>leading_digits</sql>
+                    <validation_pattern>^[0-9]*$</validation_pattern>
+                    <default_value/>
+                    <is_null_allowed>true</is_null_allowed>
+                </field>
+                <field id="length" xsi:type="AttributeInteger">
+                    <sql>length</sql>
+                    <default_value/>
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+                <field id="pattern" xsi:type="AttributeString">
+                    <sql>pattern</sql>
+                    <validation_pattern>^#( *#)*$</validation_pattern>
+                    <default_value/>
+                    <is_null_allowed>false</is_null_allowed>
+                </field>
+            </fields>
+            <event_listeners>
+                <event_listener id="OnTipPNFormatCheckToWriteRequestedByPhoneNumberMgmt">
+                    <event>EVENT_DB_CHECK_TO_WRITE</event>
+                    <callback>OnTipPNFormatCheckToWriteRequestedByPhoneNumberMgmt</callback>
+                    <rank>100</rank>
+                </event_listener>
+            </event_listeners>
+            <methods/>
+            <presentation>
+                <details>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="tippncountrycode_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="leading_digits">
+                            <rank>30</rank>
+                        </item>
+                        <item id="length">
+                            <rank>40</rank>
+                        </item>
+                        <item id="pattern">
+                            <rank>50</rank>
+                        </item>
+                    </items>
+                </details>
+                <default_search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="tippncountrycode_id">
+                            <rank>20</rank>
+                        </item>
+                    </items>
+                </default_search>
+                <search>
+                    <items>
+                        <item id="name">
+                            <rank>10</rank>
+                        </item>
+                        <item id="tippncountrycode_id">
+                            <rank>20</rank>
+                        </item>
+                        <item id="leading_digits">
+                            <rank>30</rank>
+                        </item>
+                        <item id="length">
+                            <rank>40</rank>
+                        </item>
+                    </items>
+                </search>
+                <list>
+                    <items>
+                        <item id="tippncountrycode_id">
+                            <rank>10</rank>
+                        </item>
+                        <item id="leading_digits">
+                            <rank>20</rank>
+                        </item>
+                        <item id="length">
+                            <rank>30</rank>
+                        </item>
+                        <item id="pattern">
+                            <rank>40</rank>
                         </item>
                     </items>
                 </list>
@@ -703,7 +860,7 @@
                     <extkey_attcode>tippncountrycode_id</extkey_attcode>
                     <target_attcode>calling_code</target_attcode>
                 </field>
-                <field id="firstnumber" xsi:type="AttributePhoneNumber">
+                <field id="firstnumber" xsi:type="AttributeE164PhoneNumber">
                     <dependencies>
                         <attribute id="tippncountrycode_id"/>
                     </dependencies>
@@ -711,7 +868,7 @@
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
                 </field>
-                <field id="lastnumber" xsi:type="AttributePhoneNumber">
+                <field id="lastnumber" xsi:type="AttributeE164PhoneNumber">
                     <dependencies>
                         <attribute id="tippncountrycode_id"/>
                     </dependencies>
@@ -967,7 +1124,7 @@
                     <extkey_attcode>tippnrange_id</extkey_attcode>
                     <target_attcode>name</target_attcode>
                 </field>
-                <field id="number" xsi:type="AttributePhoneNumber">
+                <field id="number" xsi:type="AttributeE164PhoneNumber">
                     <sql>number</sql>
                     <default_value/>
                     <is_null_allowed>false</is_null_allowed>
@@ -1373,6 +1530,10 @@
                             <dashlet id="teemip-5302" xsi:type="DashletBadge">
                                 <rank>1</rank>
                                 <class>TipPNCountryCode</class>
+                            </dashlet>
+                            <dashlet id="teemip-5303" xsi:type="DashletBadge">
+                                <rank>2</rank>
+                                <class>TipPNFormat</class>
                             </dashlet>
                         </dashlets>
                     </cell>

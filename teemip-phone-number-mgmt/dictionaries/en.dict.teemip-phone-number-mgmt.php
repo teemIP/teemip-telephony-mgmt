@@ -111,8 +111,33 @@ Dict::Add('EN US', 'English', 'English', array(
     'Class:TipPNCountryCode/Attribute:calling_code+' => 'Country calling code, without \'+\'',
     'Class:TipPNCountryCode/Attribute:tippnranges_list' => 'Phone number ranges',
     'Class:TipPNCountryCode/Attribute:tippnranges_list+' => 'Phone number ranges belonging to the country',
+    'Class:TipPNCountryCode/Attribute:tippnformats_list' => 'Display formats',
+    'Class:TipPNCountryCode/Attribute:tippnformats_list+' => 'Formats used to display the phone numbers of the country',
     'Class:TipPNCountryCode/UniquenessRule:no_duplicate_name' => 'This country already exists',
     'Class:TipPNCountryCode/UniquenessRule:no_duplicate_iso_code' => 'This ISO code is already used by another country',
+));
+
+//
+// Class: TipPNFormat
+//
+
+Dict::Add('EN US', 'English', 'English', array(
+    'Class:TipPNFormat' => 'Phone Number Display Format',
+    'Class:TipPNFormat+' => 'Grouping of digits used to display the national numbers of a country (ITU-T E.123)',
+    'Class:TipPNFormat/Attribute:name' => 'Name',
+    'Class:TipPNFormat/Attribute:name+' => '',
+    'Class:TipPNFormat/Attribute:tippncountrycode_id' => 'Country calling code',
+    'Class:TipPNFormat/Attribute:tippncountrycode_id+' => '',
+    'Class:TipPNFormat/Attribute:tippncountrycode_name' => 'Name of the country calling code',
+    'Class:TipPNFormat/Attribute:tippncountrycode_name+' => '',
+    'Class:TipPNFormat/Attribute:leading_digits' => 'Leading digits',
+    'Class:TipPNFormat/Attribute:leading_digits+' => 'First digits of the national number, without the country calling code. Empty for all numbers of the given length. The longest matching leading digits win.',
+    'Class:TipPNFormat/Attribute:length' => 'Length',
+    'Class:TipPNFormat/Attribute:length+' => 'Number of digits of the national number, without the country calling code',
+    'Class:TipPNFormat/Attribute:pattern' => 'Pattern',
+    'Class:TipPNFormat/Attribute:pattern+' => 'Grouping of the digits of the national number, \'#\' standing for a digit and spaces separating groups (e.g. # ## ## ## ##)',
+    'Class:TipPNFormat/UniquenessRule:no_duplicate_name' => 'This name is already used by another format',
+    'Class:TipPNFormat/UniquenessRule:no_duplicate_format' => 'A format already exists for these leading digits and this length in this country',
 ));
 
 //
@@ -233,6 +258,10 @@ Dict::Add('EN US', 'English', 'English', array(
     'UI:PNManagement:Action:New:TipPNRange:Collision0' => 'Range already exists',
     'UI:PNManagement:Action:New:TipPNRange:Collision1' => 'First number of the range collides with another range',
     'UI:PNManagement:Action:New:TipPNRange:Collision2' => 'Last number of the range collides with another range',
+    'UI:PNManagement:Action:New:TipPNFormat:WrongLength' => 'Length must be a positive number',
+    'UI:PNManagement:Action:New:TipPNFormat:PatternDoesNotMatchLength' => 'Pattern must contain %1$s \'#\', one per digit of the national number',
+    'UI:PNManagement:Action:New:TipPNFormat:LeadingDigitsTooLong' => 'Leading digits must be shorter than the national number',
+    'UI:PNManagement:Action:New:TipPNFormat:NumberTooLong' => 'With calling code +%1$s, the national number cannot exceed the 15 digits allowed by E.164',
     'UI:PNManagement:Action:Delegate:TipPNRange:ConflictWithDelegatedBlockFromOtherOrg' => 'Range contains a range delegated from another organization',
 
     // Display tree of PNRanges

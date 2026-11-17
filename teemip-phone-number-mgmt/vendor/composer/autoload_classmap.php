@@ -13,6 +13,7 @@ return array(
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersFromObsoleteCIs' => $baseDir . '/src/Hook/ReleasePhoneNumbersFromObsoleteCIs.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Hook\\ReleasePhoneNumbersWithNoCI' => $baseDir . '/src/Hook/ReleasePhoneNumbersWithNoCI.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNExtension' => $baseDir . '/src/Model/_TipPNExtension.php',
+    'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNFormat' => $baseDir . '/src/Model/_TipPNFormat.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPNRange' => $baseDir . '/src/Model/_TipPNRange.php',
     'TeemIp\\TeemIp\\Extension\\PhoneNumberManagement\\Model\\_TipPhoneNumber' => $baseDir . '/src/Model/_TipPhoneNumber.php',
 );
